@@ -1,0 +1,24 @@
+\section {おサイフケータイクラス}
+\subsection {責任}
+おサイフケータイに搭載されているスマートカードを表すドメイン・オブジェクトで、要求辞書階層の仕様である。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class おサイフケータイ is subclass of カード
+\end{vdm_al}
+
+\subsection {構成子}
+本モデルでは、単純化のため、おサイフケータイで改札を通る処理は対象としていないため、暗証番号設定は省略した。
+\begin{vdm_al}
+operations
+public おサイフケータイ : ID  ==> おサイフケータイ
+おサイフケータイ(anID) ==  (
+	sID := anID
+);
+
+end おサイフケータイ
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[おサイフケータイ]
+\end{rtinfo}

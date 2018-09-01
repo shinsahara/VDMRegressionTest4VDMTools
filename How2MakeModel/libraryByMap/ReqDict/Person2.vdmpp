@@ -1,0 +1,24 @@
+\section {人}
+		\index{ひと@人}
+人を表す。
+
+\begin{vdm_al}
+class 人
+
+instance variables
+protected i名前 : seq of char;
+
+operations
+public 人 : seq of char ==> 人
+人(s) == i名前 := s;
+
+public 名前を得る : () ==> seq of char
+名前を得る() == return i名前;
+
+end 人
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[人]
+\end{rtinfo}

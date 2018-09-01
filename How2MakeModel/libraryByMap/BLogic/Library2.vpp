@@ -1,0 +1,151 @@
+\section{オブジェクト指向モデル}
+	\index{おぶじぇくとしこうもでる@オブジェクト指向モデル}
+前節までのVDM++によるモデルは、classを定義しているとはいえ、
+オブジェクト指向モデルとは言い難かった。
+
+以下では、同じ例題をオブジェクト指向モデル化していく。
+
+本や書庫や貸出は、クラス図\ref{fig:LibraryClassDiagram}で見るようにクラスとなり、図書館2クラスの外で定義する。
+題名を得る()、著者を得る()、分野集合を得る()といった操作を本クラスで定義し、
+蔵書を追加する()や蔵書を削除する()といった操作は書庫クラスで定義し、
+本を貸す()や本を返す()操作は貸出クラスで定義する。
+図書館2クラスは、書庫と貸出クラスをスーパークラスとしてその操作を継承し、
+蔵書を追加する()や本を貸す()といった操作を使用する。
+
+\begin{figure}[h]
+	\centering
+	{\includegraphics[width=55zw, keepaspectratio]{./libraryByMap/image/Library2ClassDiagram.jpg}}
+	\caption{図書館2モデルのクラス図}
+	\label{fig:LibraryClassDiagram}
+	\index{としよかんもてるのくらすす@図書館2モデルのクラス図}
+\end{figure}
+
+今までの図書館クラス仕様は、本の内部構造を知らなければ書けない部分があったが、
+今回の仕様は本クラスの操作名と機能だけを知っていれば書くことができる。
+本クラスが変更されても、インタフェースさえ変わらなければ、図書館2クラスを変更する必要が無くなった。
+オブジェクト指向により保守性が向上したことになる。
+
+ただし、オブジェクト指向的でないVDM++モデルに比べ、オブジェクト指向的モデルは3倍ほど行数
+	\index{おぶじぇくとしこうてきもでるのぎょうすう@オブジェクト指向的モデルの行数}
+が増える傾向がある。
+また、どう実現するかを含んだ設計仕様に近い内容を持つことになる。
+
+モデルの全体を見通すには非オブジェクト指向的モデルの方が優れているし、
+再利用性や保守性の必要な本格的モデルはオブジェクト指向的モデルの方が優れているということになろう。
+
+\section{図書館2}
+\begin{vdm_al}
+class 図書館2 is subclass of 貸出情報
+
+instance variables
+private i書庫 : 書庫 := new 書庫();
+private i貸出情報 : 貸出情報 := new 貸出情報();
+\end{vdm_al}
+
+\subsection{操作定義}
+
+\subsubsection{インスタンス変数のアクセッサ}
+\begin{vdm_al}
+operations
+public 蔵書を得る : () ==> 蔵書
+蔵書を得る() == return i蔵書;
+
+public 貸出を得る : () ==> 貸出
+貸出を得る() == return i貸出;
+\end{vdm_al}
+
+\subsubsection{蔵書を追加する}
+	\index{ぞうしょをついかする@蔵書を追加する}
+\begin{vdm_al}
+operations
+public 蔵書を追加する : 蔵書 ==> ()
+蔵書を追加する(a追加本) == 
+	i蔵書 := i蔵書 munion a追加本
+pre
+	蔵書に存在しない(a追加本, i蔵書)
+post
+	蔵書が追加されている(a追加本, i蔵書, i蔵書~);
+\end{vdm_al}
+
+\subsubsection{蔵書を削除する}
+	\index{ぞうしょをさくじょする@蔵書を削除する}
+\begin{vdm_al}
+public 蔵書を削除する: 蔵書 ==> ()
+蔵書を削除する(a削除本) == 
+	i蔵書 := dom a削除本 <-: i蔵書
+pre 
+	蔵書に存在する(a削除本, i蔵書) and 
+	貸出に存在しない(a削除本, i貸出)
+post
+	蔵書が削除されている(a削除本, i蔵書, i蔵書~);
+\end{vdm_al}
+
+\subsubsection{本を検索する}
+	\index{ほんをけんさくする@本を検索する}
+\begin{vdm_al}
+public 本を検索する: (本`題名 | 著者 | 分野) ==> 蔵書
+本を検索する(a検索キー) ==  
+	return
+		{id |-> i蔵書(id) | id in set dom i蔵書 & 
+			(i蔵書(id).題名を得る() = a検索キー or 
+			i蔵書(id).著者を得る().名前を得る() = a検索キー or 
+			a検索キー in set {f.分野名を得る() | f in set i蔵書(id).分野集合を得る()})
+		}
+pre
+	検索キーが空でない(a検索キー)
+post
+	RESULT =
+		{id |-> i蔵書(id) | id in set dom i蔵書 & 
+			(i蔵書(id).題名を得る() = a検索キー or 
+			i蔵書(id).著者を得る().名前を得る() = a検索キー or 
+			a検索キー in set {f.分野名を得る() | f in set i蔵書(id).分野集合を得る()})
+		};
+\end{vdm_al}
+
+\subsubsection{本を貸す}
+	\index{ほんをかす@本を貸す}
+\begin{vdm_al}
+operations
+public 本を貸す : 書庫`蔵書 * 利用者 * 職員 ==> ()
+本を貸す(a貸出本, a利用者, -) == 
+	if a利用者 in set dom i貸出 then
+		i貸出 := i貸出 ++ {a利用者 |-> (i貸出(a利用者) munion a貸出本)}
+	else
+		i貸出 := i貸出 munion {a利用者 |-> a貸出本}
+pre
+	貸出可能である(a利用者, a貸出本, i貸出, i蔵書, v最大貸出数)
+post
+	貸出に追加されている(a貸出本, a利用者, i貸出, i貸出~);
+\end{vdm_al}
+
+\subsubsection{本を返す}
+	\index{ほんをかえす@本を返す}
+利用者への貸出本から、定義域削減演算子
+		\index{ていぎいきさくげんえんざんし@定義域削減演算子}
+		\index{\textless-:}
+ \textless-: を使って返却本に関するデータを削除する。
+ \textless-: 演算子は、貸出がなくなった利用者の情報を削除するためにも使っている。
+
+\begin{vdm_al}
+public 本を返す: 書庫`蔵書 * 利用者 * 職員 ==> ()
+本を返す(a返却本, a利用者, -) ==  
+	let w利用者への貸出本 = i貸出(a利用者),
+		w利用者への貸出本new = dom a返却本 <-: w利用者への貸出本
+	in
+	if w利用者への貸出本new = {|->} then
+		i貸出 := {a利用者} <-: i貸出
+	else
+		i貸出 := i貸出 ++ {a利用者 |-> w利用者への貸出本new}
+pre
+	貸出に存在する(a返却本, i貸出)
+post 
+	貸出から削除されている(a返却本, i貸出, i貸出~);
+\end{vdm_al}
+
+\begin{vdm_al}
+end 図書館2
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[図書館2]
+\end{rtinfo}

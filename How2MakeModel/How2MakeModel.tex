@@ -1,0 +1,237 @@
+%\documentclass[a4paper,10pt]{jsarticle}
+\documentclass[a4paper,10pt]{jsbook}
+
+\usepackage[dvipdfmx]{graphicx, color}
+%\usepackage{folha}
+\graphicspath{{image/}}
+
+\usepackage{color}
+\usepackage{array}
+\usepackage{ascmac}
+\usepackage{longtable}
+\usepackage{alltt}
+\usepackage{graphics}
+\usepackage{vpp-nms}
+\usepackage{url}
+%\usepackage{vpp}
+\usepackage{makeidx}
+\makeindex
+
+\setlength{\textheight}{42\baselineskip}
+\setlength{\footskip}{20pt}
+
+\usepackage{colortbl}
+
+\usepackage[dvipdfmx,bookmarks=true,bookmarksnumbered=true,colorlinks,plainpages=true]{hyperref}
+
+%\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+
+\definecolor{covered}{rgb}{0,0,0}      %black
+\definecolor{not-covered}{rgb}{1,0,0}  %red
+
+\setcounter{secnumdepth}{6}
+\makeatletter
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\else\clearpage\fi
+  \global\@topnum\z@
+  \secdef\@chapter\@schapter}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.5\Cvs \@plus.3\Cdp}%
+  {\reset@font\normalsize\bfseries}}
+\makeatother
+
+\renewcommand{\sf}{\sffamily \color{blue}}
+
+\newcommand{\syou}{\texttt{<}}
+\newcommand{\dai}{\texttt{>}}
+
+%\include{Title}
+
+%\pagestyle{empty}
+\usepackage{fancyhdr}
+\usepackage{lastpage} 
+  \pagestyle{fancy} 
+   \let\origtitle\title 
+  \renewcommand{\title}[1]
+	%{\lfoot{#1}\origtitle{#1}}
+	{\origtitle{#1}}
+
+  %\rfoot{\today}
+  \lhead{\title}
+  \chead{\leftmark}
+  \rhead{[\ \scshape\oldstylenums{\thepage}\ / %
+      \scshape\oldstylenums{\pageref{LastPage}}\ ]}
+  \cfoot{}
+
+\setlength{\textwidth}{\fullwidth}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+\begin{document}
+% the title page
+
+\title{対象を如何にモデル化するか？\\
+%\small{($Revision: 0.2 $ -- \today)}
+}
+\author{佐原　伸\\
+法政大学\\
+情報科学研究科
+}
+%\institute{\pgldk \and \chessnl}
+%\date{\mbox{}}
+\date{\hfill}
+\maketitle
+
+\begin{abstract}
+\setlength{\baselineskip}{12pt plus .1pt}
+%VDM++言語\cite{CSK2007PP}入門セミナーの演習問題である。
+\end{abstract}
+%\vspace{-1cm}
+
+\frontmatter % 前付
+\tableofcontents
+\listoffigures % 図目次
+\listoftables % 表目次
+\chapter {まえがき}
+	\include{Preface/Preface}
+\chapter {はじめに}
+	\label{Introduction}
+	\include{Chapter0/Intro}
+
+\mainmatter
+\part {対象を如何にモデル化するか？}
+	\label{MainBody}
+\chapter {なぜ形式手法か？}
+	\label{WhyFormal}
+	\include{Chapter1/WhyFormal}
+\chapter {形式手法VDM概要}
+	\label{VDMabstract}
+	\include{Chapter2/VDMintro}
+\chapter {VDM適用の成果}
+	\label{VDMeffect}
+	\include{Chapter3/ResultOfVDM}
+\chapter {VDM導入・開発方法・体制の概要}
+	\label{How2Intro}
+	\include{Chapter4/How2Intro}
+\chapter {対象を如何にモデル化するか？}
+	\label{How2MakeModel}
+	\include{Chapter5/ModelingProcess}
+	\include{Chapter5/ExpressReservation1}	
+%\include{ExpressReservation/Prolog}	
+	\include{ExpressReservation/ReservationSysytem.vpp}	
+	\include{ExpressReservation/Common.vpp}
+	\include{ExpressReservation/ReservationDomain.vpp}
+	\include{ExpressReservation/ReservationDomainData.vpp}
+	\include{ExpressReservation/ExpressReservatiopn.vpp}
+	\include{ExpressReservation/Contract.vpp}
+	\include{ExpressReservation/Card.vpp}
+	\include{ExpressReservation/CredirCard.vpp}
+	\include{ExpressReservation/CustomerCard.vpp}
+	\include{ExpressReservation/Wallet.vpp}
+	\include{ExpressReservation/MyTest.vpp}
+	\include{ExpressReservation/MyTestCase.vpp}
+%\include{ExpressReservation/Epilog}	
+	\include{Chapter5/ExpressReservation2}
+\chapter {まとめ}
+	\label{Conclusion}
+	\include{Chapter6/Conclusion}
+\chapter {演習問題}
+	\label{Exercise}
+\include{Chapter7/exercise}
+
+\part {モデルの具体例}
+	\label{ModelExamples}
+
+\chapter {演習問題解答の図書館システムモデル}
+	\label{LibraryModel}
+%\section {図書館0ビジネスロジック}
+	\include{libraryByMap/Library0.vpp}
+	\include{libraryByMap/Library0RQ1.vdmpp}
+
+%\section {図書館1ビジネスロジック}
+	\include{libraryByMap/Library1.vpp}
+%\section {図書館1要求辞書}
+	\include{libraryByMap/LibraryRQ1.vdmpp}
+%\section {図書館1回帰テストケース}
+	\include{libraryByMap/MyTest.vpp}
+	\include{libraryByMap/MyTestCase.vpp}
+
+%\section {図書館2ビジネスロジック}
+	\include{libraryByMap/Library2.vpp}
+%\section {図書館2要求辞書}
+	\include{libraryByMap/Author2.vdmpp}
+	\include{libraryByMap/Book2.vpp}
+	\include{libraryByMap/BookStacks.vdmpp}
+	\include{libraryByMap/Field2.vdmpp}
+	\include{libraryByMap/Lend2.vdmpp}
+	\include{libraryByMap/Person2.vdmpp}
+	\include{libraryByMap/Staff2.vdmpp}
+	\include{libraryByMap/User2.vdmpp}
+%\section {図書館2回帰テストケース}
+	\include{libraryByMap/MyTest2.vpp}
+	\include{libraryByMap/MyTestCase2.vpp}
+	\section{\ref{LibraryModel}章の参考文献}
+		VDM++\cite{SCSK2012PP}は、
+		1970年代中頃にIBMウィーン研究所で開発されたVDM-SL\cite{SCSK2012SL}を拡張し、
+		さらにオブジェクト指向拡張した形式仕様記述言語である。
+
+
+		VDM++の教科書としては\cite{Sakoh2010}がある。
+
+		VDM++を開発現場で実践的に使う場合の解説が\cite{Sahara2008}にある。
+
+\chapter {運賃計算モデル}
+	\label{FareModel}
+	\include{Fare/CalcFare.vdmpp}
+	\include{Fare/FareTableDic.vdmpp}
+	\include{Fare/railway_network.vdmpp}
+	\include{Fare/route_search.vdmpp}
+	\include{Fare/route_search_by_dijkstra.vdmpp}
+	\include{Fare/dijkstra.vdmpp}
+%\include{Fare/dijkstra4railway.vdmpp}
+	\include{Fare/railway_network_data.vdmpp}
+	\include{Fare/MyTest.vdmpp}
+	\include{Fare/MyTestCase.vdmpp}
+%\include{Fare/route_search_testspec.vdmpp}
+
+\chapter {特急券予約システム改善モデル}
+	\label{EvolvedExpressReservation}
+	\include{EvolvedExpressReservation/Prolog}	
+	\include{EvolvedExpressReservation/ReservationSysytem.vpp}	
+	\include{EvolvedExpressReservation/Common.vpp}
+	\include{EvolvedExpressReservation/ReservationDomain.vpp}
+	\include{EvolvedExpressReservation/ReservationDomainData.vpp}
+	\include{EvolvedExpressReservation/ExpressReservatiopn.vpp}
+	\include{EvolvedExpressReservation/Contract.vpp}
+	\include{EvolvedExpressReservation/Card.vpp}
+	\include{EvolvedExpressReservation/CredirCard.vpp}
+	\include{EvolvedExpressReservation/CustomerCard.vpp}
+	\include{EvolvedExpressReservation/Wallet.vpp}
+	\include{EvolvedExpressReservation/MyTest.vpp}
+	\include{EvolvedExpressReservation/MyTestCase.vpp}
+	\include{EvolvedExpressReservation/Epilog}
+
+
+%\section {ユーティリティ SSlib}
+%\include{libraryByMap/Character.vpp}
+%\include{libraryByMap/Sequence.vpp}
+%\include{libraryByMap/String.vpp}
+
+%\newpage
+%\layout
+
+%\begin{thebibliography}{9}
+
+\bibliographystyle{jplain}
+%\bibliography{/Users/sahara/svnw/sahara}
+\bibliography{/Users/sahara/Dropbox/bib/saharaUTF8}
+%\bibliography{/Users/ssahara/svnwork/sahara}
+
+%\end{thebibliography}
+
+\newpage
+\printindex
+
+\end{document}

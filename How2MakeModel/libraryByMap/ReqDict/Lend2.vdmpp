@@ -1,0 +1,116 @@
+\section {貸出情報}
+		\index{かしだしじょうほう@貸出情報}
+貸出情報を持つ。
+
+\begin{vdm_al}
+class 貸出情報 is subclass of 書庫
+
+values
+public v最大貸出数 = 3;
+
+types
+public 貸出 = map 利用者 to 書庫`蔵書;
+
+instance variables
+protected i貸出 : 貸出 := {|->};
+\end{vdm_al}
+
+\subsection{操作定義}
+
+\subsubsection{本を貸す}
+	\index{ほんをかす@本を貸す}
+\begin{vdm_al}
+operations
+public 本を貸す : 書庫`蔵書 * 利用者 * 職員 ==> ()
+本を貸す(a貸出本, a利用者, -) == 
+	if a利用者 in set dom i貸出 then
+		i貸出 := i貸出 ++ {a利用者 |-> (i貸出(a利用者) munion a貸出本)}
+	else
+		i貸出 := i貸出 munion {a利用者 |-> a貸出本}
+pre
+	貸出可能である(a利用者, a貸出本, i貸出, i蔵書, v最大貸出数)
+post
+	貸出に追加されている(a貸出本, a利用者, i貸出, i貸出~);
+\end{vdm_al}
+
+\subsubsection{本を返す}
+	\index{ほんをかえす@本を返す}
+利用者への貸出本から、定義域削減演算子
+		\index{ていぎいきさくげんえんざんし@定義域削減演算子}
+		\index{\textless-:}
+ \textless-: を使って返却本に関するデータを削除する。
+ \textless-: 演算子は、貸出がなくなった利用者の情報を削除するためにも使っている。
+
+\begin{vdm_al}
+public 本を返す: 書庫`蔵書 * 利用者 * 職員 ==> ()
+本を返す(a返却本, a利用者, -) ==  
+	let w利用者への貸出本 = i貸出(a利用者),
+		w利用者への貸出本new = dom a返却本 <-: w利用者への貸出本
+	in
+	if w利用者への貸出本new = {|->} then
+		i貸出 := {a利用者} <-: i貸出
+	else
+		i貸出 := i貸出 ++ {a利用者 |-> w利用者への貸出本new}
+pre
+	貸出に存在する(a返却本, i貸出)
+post 
+	貸出から削除されている(a返却本, i貸出, i貸出~);
+\end{vdm_al}
+
+\subsection{貸出の状態に関する関数}
+	\index{かしだしのじょうたいにかんするかんすう@貸出の状態に関する関数}
+\begin{vdm_al}
+functions
+public 貸出に追加されている : 書庫`蔵書 * 利用者 * 貸出 * 貸出 +> bool
+貸出に追加されている(a貸出本, a利用者, a貸出, a貸出旧値) ==
+	if a利用者 in set dom a貸出 then
+		a貸出 = a貸出旧値 ++ {a利用者 |-> (a貸出(a利用者) munion a貸出本)}
+	else
+		a貸出 = a貸出旧値 munion {a利用者 |-> a貸出本};
+
+public 貸出から削除されている : 書庫`蔵書 * 貸出 * 貸出 +> bool
+貸出から削除されている(a削除本, a貸出, a貸出旧値) ==
+	貸出に存在する(a削除本, a貸出旧値) and
+	貸出に存在しない(a削除本, a貸出);
+	
+static public 貸出に存在する : 書庫`蔵書 * 貸出 +> bool
+貸出に存在する(a貸出本, a貸出) == 
+	let	w蔵書 = merge rng a貸出 in
+	forall id in set dom a貸出本 & id in set dom w蔵書;
+	--dom a貸出本 subset dom w蔵書;
+
+public 貸出に存在しない : 書庫`蔵書 * 貸出 +> bool
+貸出に存在しない(a貸出本, a貸出) ==
+	not 貸出に存在する(a貸出本, a貸出);
+\end{vdm_al}
+
+\begin{vdm_al}
+public 貸出可能である : 利用者 * 書庫`蔵書 * 貸出 * 書庫`蔵書 * nat1 +> bool
+貸出可能である(a利用者, a貸出本, a貸出, a図書館蔵書, a最大貸出数) ==
+	蔵書に存在する(a貸出本, a図書館蔵書) and
+	貸出に存在しない(a貸出本, a貸出) and
+	最大貸出数を超えていない(a利用者, a貸出本, a貸出, a最大貸出数);
+
+public 貸出可能でない : 利用者 * 書庫`蔵書 * 貸出 * 書庫`蔵書 * nat1  +> bool
+貸出可能でない(a利用者, a蔵書, a貸出, a図書館蔵書, a最大貸出数) ==
+	not 貸出可能である(a利用者, a蔵書, a貸出, a図書館蔵書, a最大貸出数);
+\end{vdm_al}
+
+\subsubsection{最大貸出数を超えていない}
+\begin{vdm_al}
+public 最大貸出数を超えていない : 利用者 * 書庫`蔵書 * 貸出 * nat1  +> bool
+最大貸出数を超えていない(a利用者, a貸出本, a貸出, a最大貸出数) ==
+	if a利用者 not in set dom a貸出 then
+		card dom a貸出本 <= a最大貸出数
+	else
+		card dom a貸出(a利用者) + card dom a貸出本 <= a最大貸出数;
+\end{vdm_al}
+
+\begin{vdm_al}
+end 貸出情報
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[貸出情報]
+\end{rtinfo}

@@ -1,0 +1,24 @@
+\section {予約会員証}
+\subsection {責任}
+予約会員証1件を表す。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class 予約会員証 is subclass of カード
+\end{vdm_al}
+
+\subsection {構成子}
+\begin{vdm_al}
+operations
+public 予約会員証 : ID * 暗証番号 ==> 予約会員証
+予約会員証(anID, a暗証番号) == atomic (
+	sID := anID;
+	s暗証番号 := a暗証番号
+);
+
+end 予約会員証
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[予約会員証]
+\end{rtinfo}

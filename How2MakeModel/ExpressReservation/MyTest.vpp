@@ -1,0 +1,39 @@
+\subsubsection {TestAppクラス}
+\addcontentsline{toc}{section}{回帰テストクラス}
+\paragraph {責任}
+特急券予約モデルの回帰テスト(\ref{sec:回帰テスト}クラス参照)を行う、テスト階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class TestApp
+operations
+\end{vdm_al}
+
+\paragraph {操作 : run}
+回帰テストケースをTestSuiteに追加し、実行し、成功したか判定する。
+
+\begin{vdm_al}
+static public run : () ==> ()
+run() == (
+      dcl ts : TestSuite := new TestSuite("特急券予約モデルの回帰テスト\n"),
+          tr : TestResult := new TestResult();
+      tr.addListener(new PrintTestListener());
+      ts.addTest(new TestCaseT0001("TestCaseT0001 通常の予約成功\n"));
+      ts.addTest(new TestCaseT0002("TestCaseT0002 クレジットカードを切り替えたときの予約成功\n"));
+      ts.addTest(new TestCaseT0003("TestCaseT0003 クレジットカードを切り替え、予約からクレジットカードで特急券を得るが、予約と異なるクレジットカードでは失敗\n"));
+      ts.addTest(new TestCaseT0004("TestCaseT0004 クレジットカードを切り替え、予約から予約会員証で特急券を得るが失敗\n"));
+      ts.addTest(new TestCaseT0005("TestCaseT0005 クレジットカードを切り替え、予約から古いクレジットカードで特急券を得る事に成功\n"));
+      ts.run(tr);
+      if tr.wasSuccessful() = true then
+        def - = new IO().echo("*** 全回帰テストケース成功。 ***") in skip
+      else
+        def - = new IO().echo("*** 失敗したテストケースあり!! ***") in skip
+);
+    
+end TestApp
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestApp]
+\end{rtinfo}
+

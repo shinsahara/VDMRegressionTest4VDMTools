@@ -1,0 +1,24 @@
+\section {分野}
+	\index{ぶんや@分野}
+分野を表す。
+
+\begin{vdm_al}
+class 分野
+
+instance variables
+private i分野名 : seq of char;
+
+operations
+public 分野 : seq of char ==> 分野
+分野(s) == i分野名 := s;
+
+public 分野名を得る : () ==> seq of char
+分野名を得る() == return i分野名;
+
+end 分野
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[分野]
+\end{rtinfo}

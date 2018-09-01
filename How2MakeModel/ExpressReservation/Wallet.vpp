@@ -1,0 +1,40 @@
+\subsubsection {おサイフケータイクラス}
+	\addcontentsline{toc}{section}{おサイフケータイクラス}
+
+\paragraph {責任}
+おサイフケータイに搭載されているスマートカードを表すドメイン・オブジェクトで、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class おサイフケータイ is subclass of カード
+\end{vdm_al}
+
+\paragraph {インスタンス変数定義 : クレジットカード}
+\begin{vdm_al}
+instance variables
+sクレジットカード : クレジットカード;
+\end{vdm_al}
+
+\paragraph {構成子}
+本モデルでは、単純化のため、おサイフケータイで改札を通る処理は対象としていないため、暗証番号設定は省略した。
+\begin{vdm_al}
+operations
+public おサイフケータイ : ID * クレジットカード ==> おサイフケータイ
+おサイフケータイ(anID, aクレジットカード) == atomic (
+	sID := anID;
+	sクレジットカード := aクレジットカード
+);
+
+\end{vdm_al}
+
+\paragraph {アクセッサー}
+\begin{vdm_al}
+public クレジットカードを得る : () ==> クレジットカード
+クレジットカードを得る() == return sクレジットカード;
+
+end おサイフケータイ
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[おサイフケータイ]
+\end{rtinfo}

@@ -1,0 +1,140 @@
+\section {回帰テストケース}
+\subsection {責任}
+\label{RegressionTestcase}
+「運賃を得る」クラス、及び関連するクラスの回帰テストを行う抽象クラスで、
+最短距離を求める算法のインスタンスと、「運賃を得る」クラスのインスタンスを持つ。
+
+個々の回帰テストは、このクラスのサブクラスとして記述しなければならない。
+
+print操作は、回帰テストのログを表示する。
+
+\begin{vdm_al}
+class TestCaseT  is subclass of TestCase, 鉄道ネットデータ
+
+values
+public v最大値 = 1E8;
+
+instance variables
+public s路線検索 : 路線検索 := new ダイクストラ算法による路線検索(v駅集合, v路線単位集合);
+public s運賃を得る : 運賃を得る := 
+	new 運賃を得る([
+			mk_運賃表辞書`行(0,1,150),
+			mk_運賃表辞書`行(1,3,160),
+			mk_運賃表辞書`行(3,6,190),
+			mk_運賃表辞書`行(6,10,220),
+			mk_運賃表辞書`行(10,15,250),
+			mk_運賃表辞書`行(15,v最大値,300)
+			],
+			v駅集合,
+			v路線単位集合);
+
+operations
+public print : seq of char ==> ()
+print(s) == 
+	let - = new IO().echo(s) in skip;
+
+end TestCaseT
+\end{vdm_al}
+
+\subsection {回帰テストのノーマルケース例}
+	\label{RegressionTestNormalCase}
+	\index{かいきてすとののーまるけーすれい@回帰テストのノーマルケース例}
+	assertTrue文を使って、テスト結果が期待した値になっていることを確認している。
+	
+	assertTrue文の第2引数が、trueになることを期待した式である。
+	すなわち、距離が7.7で、運賃が220であれば、正しいということになる。
+	そうでなければ、assertTrue文の第1引数の文字列が、ログとして表示される。
+\begin{vdm_al}
+class TestCaseT0001 is subclass of TestCaseT
+operations
+-- constructor
+public TestCaseT0001: seq of char ==> TestCaseT0001
+TestCaseT0001(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def wDistance = 
+			s路線検索.最短距離(v東京, v新宿)
+	in
+	assertTrue("\t test01 計算結果が間違っている\n",
+		wDistance = 7.7 and
+  		s運賃を得る.適用する(v東京, v新宿) = 220
+	)
+);
+
+end TestCaseT0001
+\end{vdm_al}
+
+\begin{vdm_al}
+class TestCaseT0002 is subclass of TestCaseT
+operations
+-- constructor
+public TestCaseT0002: seq of char ==> TestCaseT0002
+TestCaseT0002(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def wDistance = 
+			s路線検索.最短距離(v四ツ谷, v品川)
+	in
+	assertTrue("\t test01 計算結果が間違っている。\n",	
+		wDistance = 9.5 and
+  		s運賃を得る.適用する(v四ツ谷, v品川) = 220
+	)
+);
+
+end TestCaseT0002
+\end{vdm_al}
+
+\subsection {回帰テストのエラーケース例}
+	\label{RegressionTestErrorCase}
+	\index{かいきてすとのえらーけーすれい@回帰テストのエラーケース例}
+	trap文を使って、実行時エラーの例外(RuntimeError)が発生することを期待したテストケースである。
+	
+	期待通り実行時エラー例外が発生したら、with句以下のprint操作を呼び出して、
+	期待した事前条件エラーが発生したことをログに表示する。
+	
+	VDMToolsで実行時エラーを補足するオプションをオンにしておけば、
+	回帰テスト中に実行時エラーが発生した旨のエラー・ウィンドウが表示されるが、
+	回帰テストの実行は最後まで行われ、
+	他に予想外のエラーが無ければ、回帰テストは正常終了したとログに表示される
+	\footnote{Overture toolは、実行時エラーを補足する機能がないので、最初のエラー発生時点で回帰テストが終了してしまう。}。
+\begin{vdm_al}
+class TestCaseT0003 is subclass of TestCaseT
+operations
+-- constructor
+public TestCaseT0003: seq of char ==> TestCaseT0003
+TestCaseT0003(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	trap <RuntimeError> with
+		print("\t test01 期待した事前条件エラーを検出した。\n") in (
+	def - = 
+		s路線検索.最短距離(v東京, v東京) 
+	in
+		print("\t test01 予想外のエラーに遭遇。\n")
+	)
+);
+
+end TestCaseT0003
+
+class TestCaseT0004 is subclass of TestCaseT
+operations
+-- constructor
+public TestCaseT0004: seq of char ==> TestCaseT0004
+TestCaseT0004(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	trap <RuntimeError> with
+		print("\t test01 期待した事前条件エラーを検出した。\n") in (
+	def - = 
+		s路線検索.最短距離(v東京, vコペンハーゲン) 
+	in
+		print("\t test01 予想外のエラーに遭遇。\n")
+	)
+);
+
+end TestCaseT0004
+\end{vdm_al}

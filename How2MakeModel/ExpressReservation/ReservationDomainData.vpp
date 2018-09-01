@@ -1,0 +1,36 @@
+\subsubsection {特急券予約DomainDataクラス}
+	\addcontentsline{toc}{section}{特急券予約DomainDataクラス}
+	\index{とっきゅうけんよやくどめいんおふしえくと@特急券予約DomainData}
+\paragraph {責任}
+特急券予約に関わる問題領域(domain)の、状態を持つデータを表す。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class 特急券予約DomainData is subclass of 特急券予約Domain
+
+instance variables
+protected s予約表 : 予約表 := {|->};
+\end{vdm_al}
+
+\paragraph {操作：予約集合を得る}
+	\index{よやくしゅうごうをえる@予約集合を得る}
+契約を指定して、予約集合を得る。
+
+\begin{vdm_al}
+operations
+public 予約集合を得る : 契約 ==> set of 特急券予約
+予約集合を得る(a契約) == 
+	if dom s予約表 = {} then
+		return {}
+	else
+		return s予約表(a契約)
+pre
+	dom s予約表 <> {} => a契約 in set dom s予約表;
+
+
+end 特急券予約DomainData
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[特急券予約DomainData]
+\end{rtinfo}

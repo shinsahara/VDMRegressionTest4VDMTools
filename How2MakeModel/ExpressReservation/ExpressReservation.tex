@@ -1,0 +1,108 @@
+\documentclass[a4paper,10pt]{jsarticle}
+%\documentclass[a4paper,10pt]{jsbook}
+
+\usepackage[dvipdfmx]{graphicx, color}
+%\usepackage{folha}
+\graphicspath{{image/}}
+
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{alltt}
+\usepackage{graphics}
+\usepackage{vpp-nms}
+%\usepackage{vpp}
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{colortbl}
+
+\usepackage[dvipdfmx,bookmarks=true,bookmarksnumbered=true,colorlinks,plainpages=true]{hyperref}
+
+%\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+
+
+\definecolor{covered}{rgb}{0,0,0}      %black
+\definecolor{not-covered}{rgb}{1,0,0}  %red
+
+\setcounter{secnumdepth}{6}
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.5\Cvs \@plus.3\Cdp}%
+  {\reset@font\normalsize\bfseries}}
+\makeatother
+
+\renewcommand{\sf}{\sffamily \color{blue}}
+
+\newcommand{\syou}{\texttt{<}}
+\newcommand{\dai}{\texttt{>}}
+
+%\include{Title}
+
+%\pagestyle{empty}
+\usepackage{fancyhdr}
+\usepackage{lastpage} 
+  \pagestyle{fancy} 
+   \let\origtitle\title 
+  \renewcommand{\title}[1]{\lfoot{#1}\origtitle{#1}}
+
+  \rfoot{\today}
+  \rhead{[\ \scshape\oldstylenums{\thepage}\ / %
+      \scshape\oldstylenums{\pageref{LastPage}}\ ]}
+  \cfoot{}
+
+
+\begin{document}
+
+% the title page
+\title{特急券予約システムシステムの問題点を推測した仕様}
+\author{佐原　伸\\\\
+法政大学
+情報科学研究科\\
+}
+%\institute{\pgldk \and \chessnl}
+\date{\mbox{}}
+\maketitle
+
+%\TaoReport{ガードコマンド・モデル}{\today}{タオベアーズ}{佐原伸}
+%\setlength{\baselineskip}{12pt plus .1pt}
+%\tolerance 10000
+\tableofcontents
+%\thispagestyle{empty} 
+
+%\include{Abstract}
+\include{Prolog}	
+\include{ReservationSysytem.vpp}	
+\include{Common.vpp}
+\include{ReservationDomain.vpp}
+\include{ReservationDomainData.vpp}
+\include{ExpressReservatiopn.vpp}
+\include{Contract.vpp}
+\include{Card.vpp}
+\include{CredirCard.vpp}
+\include{CustomerCard.vpp}
+\include{Wallet.vpp}
+\include{MyTest.vpp}
+\include{MyTestCase.vpp}
+\include{Epilog}
+
+%\begin{thebibliography}{9}
+\section{参考文献等}
+VDM++\cite{CSK2007PP}は、
+1970年代中頃にIBMウィーン研究所で開発されたVDM-SL\cite{CSK2007SL}を拡張し、
+さらにオブジェクト指向拡張したオープンソース
+\footnote{使用に際しては、（株）CSKシステムズとの契約締結が必要になる。}の形式仕様記述言語である。
+\bibliographystyle{jplain}
+%\bibliography{/Users/sahara/svnw/sahara}
+\bibliography{/Users/sahara/bib/saharaUTF8}
+%\bibliography{/Users/ssahara/svnwork/sahara}
+
+%\end{thebibliography}
+
+%\newpage
+%\addcontentsline{toc}{section}{Index}
+\printindex
+
+\end{document}

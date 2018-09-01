@@ -1,0 +1,23 @@
+read CalcFare.vdmpp				
+read VDMUnit.vpp			
+read route_search.vdmpp
+read FareTableDic.vdmpp
+read dijkstra.vdmpp			
+read route_search_by_dijkstra.vdmpp
+read MyTest.vdmpp			
+read io.vpp
+read route_search_testspec.vdmpp
+read MyTestCase.vdmpp
+read railway_network_data.vdmpp
+read UseFare.vdmpp
+read railway_network.vdmpp
+init
+set exception
+set dtc
+set inv
+set pre
+set post
+debug new TestSimple().run()
+debug new TestApp().run()
+tcov write vdm.tc
+rtinfo vdm.tc

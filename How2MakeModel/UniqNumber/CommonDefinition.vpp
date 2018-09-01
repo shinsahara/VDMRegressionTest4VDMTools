@@ -1,0 +1,11 @@
+class 共通定義
+
+types
+public 識別子 = 文字列;
+public 数量 = int;
+public 数値 = int;
+public Percent = real
+inv p == 0 <= p and p <= 100;
+public 文字列 = seq of char;
+
+end 共通定義

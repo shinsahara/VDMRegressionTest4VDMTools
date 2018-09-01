@@ -1,0 +1,60 @@
+\subsubsection {特急券予約クラス}
+	\addcontentsline{toc}{section}{特急券予約クラス}
+	\index{とっきゅうけんよやく@特急券予約}
+	
+\paragraph {責任}
+特急券予約1件を表す、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class 特急券予約 is subclass of 共通定義
+\end{vdm_al}
+
+\paragraph {型定義 : 予約内容}
+予約内容の型の詳細は、今回の問題に関わりがなく、仕様を詳細化していった時のみ必要なので、
+こういった場合の定石としてtoken型
+\footnote{token型はVDM++に存在する、抽象化のために使用する型である。
+システムの本質と関係ない詳細な記述を回避し、
+短時間で主要な仕様を記述し検証するために使う。}
+で定義する。
+\begin{vdm_al}
+types
+public 予約内容 = token;
+\end{vdm_al}
+
+\paragraph {インスタンス変数定義 : ID, クレジットカード, 予約内容}
+\begin{vdm_al}
+instance variables
+sID : ID;
+sクレジットカード : クレジットカード;
+s予約内容 : 予約内容;
+\end{vdm_al}
+
+\paragraph {構成子}
+\begin{vdm_al}
+operations
+public 特急券予約 : ID * クレジットカード * 特急券予約`予約内容 ==> 特急券予約
+特急券予約(anID, aクレジットカード, a予約内容) == atomic (
+	sID := anID;
+	sクレジットカード := aクレジットカード;
+	s予約内容 := a予約内容
+);
+\end{vdm_al}
+
+\paragraph {アクセッサー}
+\begin{vdm_al}
+public IDを得る : () ==> ID
+IDを得る() == return sID;
+
+public クレジットカードを得る : () ==> クレジットカード
+クレジットカードを得る() == return sクレジットカード;
+
+public 予約内容を得る : () ==> 予約内容
+予約内容を得る() == return s予約内容;
+
+end 特急券予約
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[特急券予約]
+\end{rtinfo}

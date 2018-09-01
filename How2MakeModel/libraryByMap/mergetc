@@ -1,0 +1,23 @@
+#!/usr/bin/awk -f
+# merge code coverage files of VDMTools
+# Usage: mergetc t1 t2 t3
+#Written by Sakoh Hiroshi 2005-03-25
+/^file:/ {
+  cfn = $2;
+  numfield[cfn] = 0;
+}
+/^counters:/ {
+  numfield[cfn] = NF - 2;
+  for (i = 3; i <= NF ; i++) {
+    hitCount[cfn,i-2] += $i
+  }
+}
+END {
+  for (fn in numfield) {
+    printf("file: %s\ncounters: %d", fn, numfield[fn]);
+    for (i=1 ; i <= numfield[fn] ; i++) {
+      printf(" %d", hitCount[fn, i]);
+    }
+    printf("\n");
+  }  
+}

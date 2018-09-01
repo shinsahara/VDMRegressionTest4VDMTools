@@ -1,0 +1,44 @@
+\section{路線検索}
+\index{ろせんけんさく@路線検索}
+路線検索の抽象クラスである。
+
+\begin{vdm_al}
+class 路線検索 is subclass of 路線網
+
+types
+public 経路条件:: 
+			発駅:駅
+			着駅:駅
+inv w経路条件 == 
+		w経路条件.発駅 <> w経路条件.着駅;
+                           
+instance variables
+protected s駅集合 : 駅集合;
+protected s路線単位集合 : 路線単位集合;
+inv
+	let	w路線単位集合中の駅集合 = 路線単位列中の駅集合を得る(s路線単位集合)
+	in	w路線単位集合中の駅集合 subset s駅集合;
+	
+operations
+public 最短経路 : 駅 * 駅 ==> seq of 駅 * 距離
+最短経路(a出発駅, a到着駅) == is subclass responsibility;
+
+public 最短距離 : 駅 * 駅 ==> 距離
+最短距離(a出発駅, a到着駅) == (
+	def	mk_(-, w最短距離) = 最短経路(a出発駅, a到着駅) in
+	return w最短距離;
+)
+pre
+	到達可能である(a出発駅, a到着駅);
+
+public 到達可能である: 駅 * 駅 ==>bool
+到達可能である(a出発駅, a到着駅) ==
+	let mk_(-, d) = 最短経路(a出発駅, a到着駅) in
+	return d  > 0
+
+end 路線検索
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[路線検索]
+\end{rtinfo}

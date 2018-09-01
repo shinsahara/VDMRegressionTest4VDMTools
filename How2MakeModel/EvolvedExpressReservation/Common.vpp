@@ -1,0 +1,21 @@
+\section {共通定義クラス}
+\subsection {責任}
+特急券予約モデルで共通に使用する定義を表す。
+\begin{vdm_al}
+class 共通定義
+
+types
+public ID = [token];
+public 暗証番号 = [token];
+
+operations
+public print : seq of char ==> ()
+print(a文字列) == 
+	let - = new IO().echo(a文字列) in skip;
+
+end 共通定義
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[共通定義]
+\end{rtinfo}

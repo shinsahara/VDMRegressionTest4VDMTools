@@ -1,0 +1,138 @@
+\documentclass[a4paper,10pt]{jsarticle}
+%\documentclass[a4paper,10pt]{jsbook}
+
+\usepackage[dvipdfmx]{graphicx, color}
+%\usepackage{folha}
+\graphicspath{{image/}}
+
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{alltt}
+\usepackage{graphics}
+\usepackage{vpp-nms}
+%\usepackage{vpp}
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{colortbl}
+
+\usepackage[dvipdfmx,bookmarks=true,bookmarksnumbered=true,colorlinks,plainpages=true]{hyperref}
+
+%\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+
+\definecolor{covered}{rgb}{0,0,0}      %black
+\definecolor{not-covered}{rgb}{1,0,0}  %red
+
+\setcounter{secnumdepth}{6}
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.5\Cvs \@plus.3\Cdp}%
+  {\reset@font\normalsize\bfseries}}
+\makeatother
+
+\renewcommand{\sf}{\sffamily \color{blue}}
+
+\newcommand{\syou}{\texttt{<}}
+\newcommand{\dai}{\texttt{>}}
+
+%\include{Title}
+
+%\pagestyle{empty}
+\usepackage{fancyhdr}
+\usepackage{lastpage} 
+  \pagestyle{fancy} 
+   \let\origtitle\title 
+  \renewcommand{\title}[1]{\lfoot{#1}\origtitle{#1}}
+
+  \rfoot{\today}
+  \rhead{[\ \scshape\oldstylenums{\thepage}\ / %
+      \scshape\oldstylenums{\pageref{LastPage}}\ ]}
+  \cfoot{}
+
+
+\begin{document}
+
+% the title page
+
+\title{VDM++言語入門セミナー　演習問題\\
+\small{($Revision: 0.2 $ -- \today)}}
+\author{佐原　伸\\
+SCSK Corporation\\
+基盤開発課
+}
+%\institute{\pgldk \and \chessnl}
+\date{\mbox{}}
+\maketitle
+
+\begin{abstract}
+\setlength{\baselineskip}{12pt plus .1pt}
+%VDM++言語\cite{CSK2007PP}入門セミナーの演習問題である。
+「対象を如何にモデル化するか？」のモデル作成例。
+\end{abstract}
+%\vspace{-1cm}
+
+\tableofcontents
+
+%\mainmatter
+%\section {図書館0ビジネスロジック}
+\include{Library0.vpp}
+%\section {図書館0要求辞書}
+\include{Library0RQ1.vdmpp}
+%\section {図書館1ビジネスロジック}
+\include{Library1.vpp}
+%\section {図書館1要求辞書}
+\include{LibraryRQ1.vdmpp}
+%\section {図書館1回帰テストケース}
+\include{MyTest.vpp}
+\include{MyTestCase.vpp}
+
+%\section {図書館2ビジネスロジック}
+\include{Library2.vpp}
+%\section {図書館2要求辞書}
+\include{Author2.vdmpp}
+\include{Book2.vpp}
+\include{BookStacks.vdmpp}
+\include{Field2.vdmpp}
+\include{Lend2.vdmpp}
+\include{Person2.vdmpp}
+\include{Staff2.vdmpp}
+\include{User2.vdmpp}
+%\section {図書館2回帰テストケース}
+\include{MyTest2.vpp}
+\include{MyTestCase2.vpp}
+
+%\section {ユーティリティ SSlib}
+%\include{Character.vpp}
+%\include{Sequence.vpp}
+%\include{String.vpp}
+
+\newpage
+%\layout
+
+%\begin{thebibliography}{9}
+\section{参考文献、索引}
+VDM++\cite{SCSK2012PP}は、
+1970年代中頃にIBMウィーン研究所で開発されたVDM-SL\cite{SCSK2012SL}を拡張し、
+さらにオブジェクト指向拡張した
+\footnote{使用に際しては、SCSK株式会社との契約締結が必要になる。}の形式仕様記述言語である。
+
+
+VDM++の教科書としては\cite{Sakoh2010}がある。
+
+VDM++を開発現場で実践的に使う場合の解説が\cite{Sahara2008}にある。
+
+\bibliographystyle{jplain}
+%\bibliography{/Users/sahara/svnw/sahara}
+\bibliography{/Users/sahara/Dropbox/bib/saharaUTF8}
+%\bibliography{/Users/ssahara/svnwork/sahara}
+
+%\end{thebibliography}
+
+%\newpage
+%\addcontentsline{toc}{section}{Index}
+\printindex
+
+\end{document}

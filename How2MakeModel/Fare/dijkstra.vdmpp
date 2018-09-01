@@ -1,0 +1,99 @@
+\section{ダイクストラ算法}
+\index{たいくすとらさんぽう@ダイクストラ算法}
+路線単位の長さが非負である鉄道グラフ(ネットワーク)の上で、ある駅から他の任意の駅への最短経路・最短距離を求める。
+
+「アルゴリズム辞典」のアルゴリズム(p.455)をそのまま使用。ただし、配列は写像を使って実装した。
+
+\begin{vdm_al}
+class ダイクストラ算法 is subclass of 路線網
+
+types
+public 確定 = <未確定> | <既確定>;
+public X確定 = map 駅 to 確定;
+public V最短距離 = map 駅 to real;	--駅から最短距離への写像
+public P直前の駅 = map 駅 to 駅;	--駅から直前の駅への写像
+
+instance variables
+public s路線単位集合 : 路線単位集合;
+public s駅集合 : 駅集合;
+public x : X確定 := {|->};
+public v : V最短距離 := {|->};
+public p : P直前の駅 := {|->};
+
+values
+v無限大 = 1E16;
+
+operations
+public  ダイクストラ算法: set of 路線単位 * set of 駅 ==> ダイクストラ算法
+ダイクストラ算法(a路線単位集合, a駅集合) == (
+   s路線単位集合:= a路線単位集合;
+   s駅集合 := a駅集合
+);
+
+operations
+public 最短経路: 駅 * 駅 ==> seq of 駅 * real
+最短経路(a出発駅, a到着駅) == (
+	dcl i : 駅 := a出発駅;
+	for all w駅 in set s駅集合 do
+		if w駅 = a出発駅 then (
+			x(a出発駅) := <既確定>;
+			v(a出発駅) := 0
+		)
+		else (
+			x(w駅) := <未確定>;
+			v(w駅) := v無限大;
+		);
+	for all w駅 in set s駅集合 do (
+		def Ni = {u.f駅2 | u in set s路線単位集合 & u.f駅1 = i};
+			Nu = {u | u in set s路線単位集合 & u.f駅1 = i};
+		in (
+			--最短距離の計算
+			for all j in set Ni do (
+				if x(j) = <未確定> then
+					def w = v(i) + d(Nu, i,j) in
+					if w < v(j) then (
+						v(j) := w;
+						p(j) := i
+					);
+			);
+			def Ni未確定 = {e | e in set Ni & x(e) = <未確定>} in
+			if Ni未確定 <> {} then
+				let s in set Ni未確定 be st forall s1 in set Ni未確定 & v(s) <= v(s1)
+				in (
+					i := s;
+					x(i) := <既確定>
+				)
+		)
+	);
+	def w最短経路 = 経路を作る(p, a出発駅, a到着駅);
+		w最短距離 = v(a到着駅)
+	in
+	return mk_(w最短経路, w最短距離)
+);
+
+functions
+d : 路線単位集合 * 駅 * 駅 -> real
+d(a路線単位集合, a駅1, a駅2) ==
+	let di in set a路線単位集合 be st di.f駅1 = a駅1 and di.f駅2 = a駅2 in
+	di.f距離;
+
+operations 
+経路を作る : P直前の駅 * 駅 * 駅 ==> seq of 駅
+経路を作る(aP直前の駅, a出発駅, a到着駅) == (
+	dcl w最短経路 : seq of 駅 := [],
+		w駅 : 駅 := a到着駅;
+	while w駅 <> a出発駅 do (
+		w最短経路 := [w駅] ^ w最短経路;
+		w駅 := aP直前の駅(w駅);
+	);
+	return [a出発駅] ^ w最短経路
+)
+pre
+	a到着駅 in set dom aP直前の駅;
+
+end ダイクストラ算法
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[ダイクストラ算法]
+\end{rtinfo}

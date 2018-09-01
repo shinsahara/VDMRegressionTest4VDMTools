@@ -1,0 +1,25 @@
+\subsubsection {クレジットカードクラス}
+\addcontentsline{toc}{section}{クレジットカードクラス}
+\paragraph {責任}
+クレジットカードを表すドメイン・オブジェクトで、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class クレジットカード is subclass of カード
+\end{vdm_al}
+
+\paragraph {構成子}
+\begin{vdm_al}
+operations
+public クレジットカード : ID * 暗証番号 ==> クレジットカード
+クレジットカード(anID, a暗証番号) == atomic (
+	sID := anID;
+	s暗証番号 := a暗証番号
+);
+
+end クレジットカード
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[クレジットカード]
+\end{rtinfo}

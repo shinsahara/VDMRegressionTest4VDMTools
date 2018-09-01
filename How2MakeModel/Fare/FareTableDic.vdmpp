@@ -1,0 +1,96 @@
+\section{運賃表辞書}
+	\index{うんちんひょうじしょ@運賃表辞書}
+運賃表の用語(名詞と述語)を定義する要求辞書(Requirement Dictionary)階層の仕様である。
+
+運賃表に関する、問題領域の知識(Domain Knowledge)を持つ。
+
+\begin{vdm_al}
+class 運賃表辞書
+
+types
+public 運賃 = nat;
+public 行 ::
+	f下限 : 路線網`距離
+	f上限 : 路線網`距離
+	f運賃 :- 運賃;
+\end{vdm_al}
+:- という記号は、レコードの欄である運賃型のf運賃が、レコードのキーとはならないことを指示している。
+
+\subsection{運賃表(型)}
+	\index{うんちんひょうかた@運賃表(型)}
+運賃表の各行の上限と下限は重複しないことを、不変条件として定義している。
+	\index{うんちんひょうのふへんじょうけん@運賃表の不変条件}
+
+\begin{vdm_al}
+public 運賃表 = seq of 行
+inv w運賃表 == 
+	forall i, j in set inds w運賃表 & 
+		下限より上限が大きい(w運賃表(i).f下限, w運賃表(i).f上限) and
+		j = i + 1 => 上限と次の行の下限は等しい(w運賃表(i).f上限, w運賃表(j).f下限);
+
+functions
+\end{vdm_al}
+
+\subsection{距離に応じた運賃を得る}
+	\index{きょりにおうしたうんちんをえる@距離に応じた運賃を得る}
+	
+\begin{vdm_al}
+static public 距離に応じた運賃を得る : 運賃表 * 路線網`距離  -> 運賃
+距離に応じた運賃を得る(a運賃表, a距離) ==
+	let n = 運賃表の何番目かを得る(a運賃表, a距離) in
+	a運賃表(n).f運賃
+pre
+	運賃表にただ一つ存在する(a運賃表, a距離)
+post
+	let n = 運賃表の何番目かを得る(a運賃表, a距離) in
+	RESULT = a運賃表(n).f運賃;
+\end{vdm_al}
+
+\subsection{運賃表のある行に存在する}
+	\index{うんちんひょうのあるぎょうにそんざいする@運賃表のある行に存在する}
+	
+\begin{vdm_al}
+static public 運賃表のある行に存在する : 行 * 路線網`距離 +> bool
+運賃表のある行に存在する(a行, a距離) ==
+	a行.f下限 <= a距離 and a距離 < a行.f上限;
+\end{vdm_al}
+
+\subsection{運賃表にただ一つ存在する}
+	\index{うんちんひょうにただひとつそんざいする@運賃表にただ一つ存在する}
+	
+\begin{vdm_al}
+static public 運賃表にただ一つ存在する : 運賃表 * 路線網`距離 -> bool
+運賃表にただ一つ存在する(a運賃表, a距離) ==
+	exists1 i in set inds a運賃表 & 運賃表のある行に存在する(a運賃表(i), a距離);
+\end{vdm_al}
+
+\subsection{運賃表の何番目かを得る}
+	\index{うんちんひょうのなんばんめかをえる@運賃表の何番目かを得る}
+	
+\begin{vdm_al}
+static public 運賃表の何番目かを得る : 運賃表 * 路線網`距離 -> nat1
+運賃表の何番目かを得る(a運賃表, a距離) ==
+	let i in set inds a運賃表 be st 運賃表のある行に存在する(a運賃表(i), a距離) in i;
+\end{vdm_al}
+
+\subsection{下限より上限が大きい}
+	\index{かげんよりじょうげんがおおきい@下限より上限が大きい}
+	
+\begin{vdm_al}
+static public 下限より上限が大きい : 路線網`距離 * 路線網`距離 -> bool
+下限より上限が大きい(a下限, a上限) == a下限 < a上限;
+\end{vdm_al}
+
+\subsection{上限と次の行の下限は等しい}
+	\index{じょうげんとつぎのぎょうのかげんはひとしい@上限と次の行の下限は等しい}
+	
+\begin{vdm_al}
+static public 上限と次の行の下限は等しい : 路線網`距離 * 路線網`距離 -> bool
+上限と次の行の下限は等しい(a下限, a上限) == a下限 = a上限;
+
+end 運賃表辞書
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[運賃表辞書]
+\end{rtinfo}

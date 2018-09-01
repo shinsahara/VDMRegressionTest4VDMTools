@@ -1,0 +1,36 @@
+\section {図書館2回帰テスト}
+\subsection {TestApp2}
+\subsubsection {責任}
+回帰テストを行う。
+
+\subsubsection {クラス定義}
+\begin{vdm_al}
+class TestApp2
+operations
+\end{vdm_al}
+
+\subsubsection {操作 : run}
+回帰テストケースをTestSuiteに追加し、実行し、成功したか判定する。
+
+\begin{vdm_al}
+static public run : () ==> ()
+run() == (
+      dcl ts : TestSuite := new TestSuite("図書館2:オブジェクト指向図書館貸し出しモデルの回帰テスト\n"),
+          tr : TestResult := new TestResult();
+      tr.addListener(new PrintTestListener());
+      ts.addTest(new TestCaseUT2001("TestCaseUT2001:\tノーマルケースの単体テスト\n"));
+      ts.addTest(new TestCaseUT2002("TestCaseST2002:\tエラーケースの単体テスト\n"));
+      ts.run(tr);
+      if tr.wasSuccessful() = true then
+        def - = new IO().echo("*** 全回帰テストケース成功。 ***") in skip
+      else
+        def - = new IO().echo("*** 失敗したテストケースあり!! ***") in skip
+);
+    
+end TestApp2
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestApp2]
+\end{rtinfo}
+

@@ -1,0 +1,316 @@
+\subsubsection {TestCaseT0001クラス}
+\paragraph {責任}
+通常の予約をテストする、テスト階層の仕様である。
+
+\begin{vdm_al}
+class TestCaseT0001 is subclass of TestCase, 共通定義
+operations
+-- constructor
+public TestCaseT0001: seq of char ==> TestCaseT0001
+TestCaseT0001(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def 
+		wクレジットカード = new クレジットカード(mk_token(<クレジットID01>), mk_token(<クレジットPW01>));
+		wおサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), wクレジットカード);
+		w会員証 = new 予約会員証(mk_token(<会員証ID01>), mk_token(<会員証PW01>), wクレジットカード);
+		w契約 = new 契約(wおサイフケータイ, w会員証);
+		wシステム = new 特急券予約システム({|->})
+	in (
+		assertTrue("test01 契約に失敗",
+			wシステム.予約集合を得る(w契約) = {} and
+			w契約.会員証を得る() = w会員証
+		);
+		def	wおサイフケータイクレジットカード = wおサイフケータイ.クレジットカードを得る()
+		in (
+			def - = wシステム.予約する( w契約, mk_token(<予約ID01>), wおサイフケータイクレジットカード, mk_token(<最初の予約内容>)) in
+			assertTrue("test01 予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID01>), wクレジットカード) = mk_token(<最初の予約内容>)
+			);
+			def - = wシステム.予約する(w契約, mk_token(<予約ID02>), wおサイフケータイクレジットカード, mk_token(<次の予約内容>)) in
+			assertTrue("test01 2回目の予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID02>), wクレジットカード) = mk_token(<次の予約内容>)
+			);
+		)
+	)
+);
+end TestCaseT0001
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestCaseT0001]
+\end{rtinfo}
+
+
+\subsubsection {TestCaseT0002クラス}
+\paragraph {責任}
+クレジットカードを切り替えたときの予約をテストする、テスト階層の仕様である。。
+
+\begin{vdm_al}
+class TestCaseT0002 is subclass of TestCase, 共通定義
+operations
+-- constructor
+public TestCaseT0002: seq of char ==> TestCaseT0002
+TestCaseT0002(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def 
+		wクレジットカード =  new クレジットカード(mk_token(<クレジットID01>), mk_token(<クレジットPW01>));
+		wおサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), wクレジットカード);
+		w会員証 = new 予約会員証(mk_token(<会員証ID01>), mk_token(<会員証PW01>), wクレジットカード);
+		w契約 = new 契約(wおサイフケータイ, w会員証);
+		wシステム = new 特急券予約システム({|->})
+	in (
+		assertTrue("test01 契約に失敗",
+			wシステム.予約集合を得る(w契約) = {} and
+			w契約.会員証を得る() = w会員証
+		);
+		def	w古いクレジットカード = wおサイフケータイ.クレジットカードを得る()
+		in (
+			def - = wシステム.予約する(w契約, mk_token(<予約ID01>), w古いクレジットカード, mk_token(<最初の予約内容>)) in
+			assertTrue("test01 予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID01>), wクレジットカード) = mk_token(<最初の予約内容>)
+			);
+			def w2クレジットカード = new クレジットカード(mk_token(<クレジットカードID02>), mk_token(<クレジットカードPW02>));
+				w2おサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), w2クレジットカード);
+				w変更後のクレジットカード = w2おサイフケータイ.クレジットカードを得る();
+			in (
+				def - = wシステム.予約する(w契約, mk_token(<予約ID02>), w変更後のクレジットカード, mk_token(<次の予約内容>)) in
+				assertTrue("test01 2回目の予約に失敗",
+					wシステム.特急券を得る(mk_token(<予約ID02>), w2クレジットカード) = mk_token(<次の予約内容>)
+				);
+			)
+		)
+	)
+);
+
+end TestCaseT0002
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestCaseT0002]
+\end{rtinfo}
+
+
+\subsubsection {TestCaseT0003クラス}
+\paragraph {責任}
+クレジットカードを切り替え、予約した特急券を得る場合をテストする、テスト階層の仕様である。
+古いクレジットカードでは「Error 58: 事前条件の評価結果がfalseです」という実行時エラーが発生し、
+変更後のクレジットカードでは、特急券を得ることができる。
+
+\begin{vdm_al}
+class TestCaseT0003 is subclass of TestCase, 共通定義
+operations
+-- constructor
+public TestCaseT0003: seq of char ==> TestCaseT0003
+TestCaseT0003(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def 
+		wクレジットカード =  new クレジットカード(mk_token(<クレジットID01>), mk_token(<クレジットPW01>));
+		wおサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), wクレジットカード);
+		w会員証 = new 予約会員証(mk_token(<会員証ID01>), mk_token(<会員証PW01>), wクレジットカード);
+		w契約 = new 契約(wおサイフケータイ, w会員証);
+		wシステム = new 特急券予約システム({|->})
+	in (
+		assertTrue("test01 契約に失敗",
+			wシステム.予約集合を得る(w契約) = {} and
+			w契約.会員証を得る() = w会員証
+		);
+		def	w古いクレジットカード = wおサイフケータイ.クレジットカードを得る()
+		in (
+			def - = wシステム.予約する(w契約, mk_token(<予約ID01>), w古いクレジットカード, mk_token(<最初の予約内容>)) in
+			assertTrue("test01 予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード) = mk_token(<最初の予約内容>)
+			);
+			def w2クレジットカード = new クレジットカード(mk_token(<クレジットカードID02>), mk_token(<クレジットカードPW02>));
+				w2おサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), w2クレジットカード);
+				w変更後のクレジットカード = w2おサイフケータイ.クレジットカードを得る()
+			in (
+				def - = wシステム.予約する(w契約, mk_token(<予約ID02>), w変更後のクレジットカード, mk_token(<次の予約内容>)) in
+				assertTrue("test01 2回目の予約に失敗",
+					wシステム.特急券を得る(mk_token(<予約ID02>), w変更後のクレジットカード) = mk_token(<次の予約内容>)
+				);
+				def w2予約内容 = wシステム.特急券を得る(mk_token(<予約ID02>), w変更後のクレジットカード) in
+				assertTrue("test01 変更後のクレジットカードで特急券を得ることに失敗",
+					w2予約内容 = mk_token(<次の予約内容>)
+				);
+				def w2予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w会員証) 
+				in
+					assertTrue("test01 予約会員証で特急券を得ることに失敗",
+					w2予約内容 = mk_token(<最初の予約内容>)
+				);
+				trap <RuntimeError> with 
+					print("\ttest01 テスト意図通り、古いクレジットカードで特急券を得ることに失敗\n")
+				in 
+				def w3予約内容 = wシステム.特急券を得る(mk_token(<予約ID02>), w古いクレジットカード)
+				in
+				assertTrue("\ttest01 テスト意図に反し、古いクレジットカードで特急券を得ることに成功\n",
+					w3予約内容 = mk_token(<次の予約内容>)
+				);
+			);
+		)
+	)
+);
+end TestCaseT0003
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestCaseT0003]
+\end{rtinfo}
+
+
+\subsubsection {TestCaseT0004クラス}
+\paragraph {責任}
+クレジットカードを切り替え、古いクレジットカードで予約した特急券を得る場合をテストする、テスト階層の仕様である。
+
+古いクレジットカードで、特急券を得ることができる。
+
+予約会員証および変更後のクレジットカードでは「Error 58: 事前条件の評価結果がfalseです」という実行時エラーが発生するが、
+ログに「test01 テストの意図通り、予約会員証で特急券を得ることに失敗」と表示され、
+回帰テスト自体は成功する。
+
+
+\begin{vdm_al}
+class TestCaseT0004 is subclass of TestCase, 共通定義
+operations
+-- constructor
+public TestCaseT0004: seq of char ==> TestCaseT0004
+TestCaseT0004(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def 
+		wクレジットカード =  new クレジットカード(mk_token(<クレジットID01>), mk_token(<クレジットPW01>));
+		wおサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), wクレジットカード);
+		w会員証 = new 予約会員証(mk_token(<会員証ID01>), mk_token(<会員証PW01>), wクレジットカード);
+		w契約 = new 契約(wおサイフケータイ, w会員証);
+		wシステム = new 特急券予約システム({|->})
+	in (
+		assertTrue("test01 契約に失敗",
+			wシステム.予約集合を得る(w契約) = {} and
+			w契約.会員証を得る() = w会員証
+		);
+		def	w古いクレジットカード = wおサイフケータイ.クレジットカードを得る()
+		in (
+			def - = wシステム.予約する(w契約, mk_token(<予約ID01>), w古いクレジットカード, mk_token(<最初の予約内容>)) in
+			assertTrue("test01 予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード) = mk_token(<最初の予約内容>)
+			);
+			def w2クレジットカード = new クレジットカード(mk_token(<クレジットカードID02>), mk_token(<クレジットカードPW02>));
+				w2おサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), w2クレジットカード);
+				w変更後のクレジットカード = w2おサイフケータイ.クレジットカードを得る();
+			in (
+				def - = wシステム.予約する(w契約, mk_token(<予約ID02>), w変更後のクレジットカード, mk_token(<次の予約内容>)) in
+				assertTrue("test01 2回目の予約に失敗",
+					wシステム.特急券を得る(mk_token(<予約ID02>), w変更後のクレジットカード) = mk_token(<次の予約内容>)
+				);
+				def w2予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード) in
+				assertTrue("test01 古いクレジットカード特急券を得ることに失敗",
+					w2予約内容 = mk_token(<最初の予約内容>)
+				);
+				trap <RuntimeError> with 
+					print("\ttest01 テストの意図通り、予約会員証で特急券を得ることに失敗\n") 
+				in (
+					wシステム.クレジットカードを切り替える(w契約, w変更後のクレジットカード);
+					def w3予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w会員証)
+					in
+						assertTrue("\ttest01 テスト意図に反し、予約会員証で特急券を得ることに成功するが...\n",
+						w3予約内容 = mk_token(<最初の予約内容>)
+					)
+				);
+			);
+		)
+	)
+);
+
+end TestCaseT0004
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestCaseT0003]
+\end{rtinfo}
+
+
+\subsubsection {TestCaseT0005クラス}
+\paragraph {責任}
+クレジットカードを切り替え、古いクレジットカードで予約した特急券を得る場合をテストする、テスト階層の仕様である。
+
+古いクレジットカードで、特急券を得ることができる。
+
+予約会員証および変更後のクレジットカードでは「Error 58: 事前条件の評価結果がfalseです」という実行時エラーが発生するが、
+ログに「test01 テストの意図通り、古いクレジットカードで特急券を得ることに成功」と表示され、
+回帰テスト自体は成功する。
+
+
+\begin{vdm_al}
+class TestCaseT0005 is subclass of TestCase, 共通定義
+operations
+-- constructor
+public TestCaseT0005: seq of char ==> TestCaseT0005
+TestCaseT0005(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	def 
+		wクレジットカード =  new クレジットカード(mk_token(<クレジットID01>), mk_token(<クレジットPW01>));
+		wおサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), wクレジットカード);
+		w会員証 = new 予約会員証(mk_token(<会員証ID01>), mk_token(<会員証PW01>), wクレジットカード);
+		w契約 = new 契約(wおサイフケータイ, w会員証);
+		wシステム = new 特急券予約システム({|->})
+	in (
+		assertTrue("test01 契約に失敗",
+			wシステム.予約集合を得る(w契約) = {} and
+			w契約.会員証を得る() = w会員証
+		);
+		def	w古いクレジットカード = wおサイフケータイ.クレジットカードを得る()
+		in (
+			def - = wシステム.予約する(w契約, mk_token(<予約ID01>), w古いクレジットカード, mk_token(<最初の予約内容>)) in
+			assertTrue("test01 予約に失敗",
+				wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード) = mk_token(<最初の予約内容>)
+			);
+			def w2クレジットカード = new クレジットカード(mk_token(<クレジットカードID02>), mk_token(<クレジットカードPW02>));
+				w2おサイフケータイ = new おサイフケータイ(mk_token(<おサイフケータイID01>), w2クレジットカード);
+				w変更後のクレジットカード = w2おサイフケータイ.クレジットカードを得る();
+			in (
+				def - = wシステム.予約する(w契約, mk_token(<予約ID02>), w変更後のクレジットカード, mk_token(<次の予約内容>)) in
+				assertTrue("test01 2回目の予約に失敗",
+					wシステム.特急券を得る(mk_token(<予約ID02>), w変更後のクレジットカード) = mk_token(<次の予約内容>)
+				);
+				def w2予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード) in
+				assertTrue("test01 古いクレジットカード特急券を得ることに失敗",
+					w2予約内容 = mk_token(<最初の予約内容>)
+				);
+				trap <RuntimeError> with 
+					print("test01 テストの意図通り、変更後のクレジットカードで特急券を得ることに失敗\n") 
+				in (
+					wシステム.クレジットカードを切り替える(w契約, w変更後のクレジットカード);
+					def w3予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w変更後のクレジットカード)
+					in
+						assertTrue("\ttest01 テスト意図に反し、古いクレジットカードで特急券を得ることに失敗するが...\n",
+						w3予約内容 = mk_token(<最初の予約内容>)
+					)
+				);
+				trap <RuntimeError> with 
+					print("test01 テストの意図反し、古いクレジットカードで特急券を得ることに失敗\n") 
+				in (
+					wシステム.クレジットカードを切り替える(w契約, w変更後のクレジットカード);
+					def w3予約内容 = wシステム.特急券を得る(mk_token(<予約ID01>), w古いクレジットカード)
+					in
+						assertTrue("\ttest01 テスト意図に反し、古いクレジットカードで特急券を得ることに失敗するが...\n",
+						w3予約内容 = mk_token(<最初の予約内容>)
+					)
+				);
+			);
+		)
+	)
+);
+end TestCaseT0005
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[TestCaseT0004]
+\end{rtinfo}

@@ -1,0 +1,22 @@
+\subsubsection {カードクラス}
+\addcontentsline{toc}{section}{カードクラス}
+\paragraph {責任}
+カードの抽象クラスで、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class カード is subclass of 共通定義
+\end{vdm_al}
+
+\paragraph {インスタンス変数定義 : ID, 暗証番号}
+\begin{vdm_al}
+instance variables
+protected sID : ID := nil;
+protected s暗証番号 : 暗証番号 := nil;
+
+end カード
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[カード]
+\end{rtinfo}

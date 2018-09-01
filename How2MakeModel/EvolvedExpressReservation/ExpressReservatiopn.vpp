@@ -1,0 +1,59 @@
+\section {特急券予約クラス}
+	\index{とっきゅうけんよやくよやく@特急券予約}
+	
+\subsection {責任}
+特急券予約1件を表す。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class 特急券予約 is subclass of 共通定義
+\end{vdm_al}
+
+\subsection {型定義 : 予約内容}
+\begin{vdm_al}
+types
+public 予約内容 = token;
+\end{vdm_al}
+
+\subsection {インスタンス変数定義 : ID, 契約, 予約内容}
+\begin{vdm_al}
+instance variables
+sID : ID;
+s契約 : 契約;
+s予約内容 : 予約内容;
+\end{vdm_al}
+
+\subsection {構成子}
+\begin{vdm_al}
+operations
+public 特急券予約 : ID * 契約 * 特急券予約`予約内容 ==> 特急券予約
+特急券予約(anID, a契約, a予約内容) == atomic (
+	sID := anID;
+	s契約 := a契約;
+	s予約内容 := a予約内容
+);
+\end{vdm_al}
+
+\subsection {アクセッサー}
+\begin{vdm_al}
+public IDを得る : () ==> ID
+IDを得る() == return sID;
+
+public 契約を得る : () ==> 契約
+契約を得る() == return s契約;
+
+public 予約内容を得る : () ==> 予約内容
+予約内容を得る() == return s予約内容;
+
+public クレジットカードを得る : () ==> クレジットカード
+クレジットカードを得る() == return s契約.クレジットカードを得る();
+
+public 会員証を得る : () ==> 予約会員証
+会員証を得る() == return s契約.会員証を得る();
+
+end 特急券予約
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[特急券予約]
+\end{rtinfo}

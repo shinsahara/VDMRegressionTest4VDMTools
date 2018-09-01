@@ -1,0 +1,50 @@
+\section{UseFare}
+鉄道の運賃計算仕様の組合せテストである。
+
+回帰テストも1ケースとして記述した。
+
+\begin{vdm_al}
+class UseFare is subclass of 鉄道ネットデータ
+
+values
+public v最大値 = 1E8;
+
+instance variables
+public t0 : TestSimple := new TestSimple();
+public t1 : TestApp := new TestApp();
+public i路線検索 : ダイクストラ算法による路線検索 :=
+	--new ダイクストラ算法による路線検索(v駅集合, v路線集合, v路線単位集合);
+	new ダイクストラ算法による路線検索(v駅集合, v路線単位集合);
+public i運賃を得る : 運賃を得る := 
+	new 運賃を得る([
+			mk_運賃表辞書`行(0,1,150),
+			mk_運賃表辞書`行(1,2,160),
+			mk_運賃表辞書`行(2,3,190),
+			mk_運賃表辞書`行(3,4,220),
+			mk_運賃表辞書`行(4,v最大値,250)
+			],
+			鉄道ネットデータ`v駅集合,
+			--鉄道ネットデータ`v路線集合,
+			鉄道ネットデータ`v路線単位集合);
+
+traces
+T0 : t0.run() --簡易回帰テスト
+
+T1 : t1.run()  --回帰テスト
+
+T2 :
+	let s1 in set {v東京, v新宿, v品川, v四ツ谷, v池袋, vコペンハーゲン} in 
+	let s2 in set { v新宿, v品川, v四ツ谷, v池袋, v東京, vコペンハーゲン} in 
+	i路線検索.最短距離(s1, s2)
+
+T3 : 
+	let s1 in set {v東京, v新宿, v品川, v四ツ谷, v池袋, vコペンハーゲン} in 
+	let s2 in set { v新宿, v品川, v四ツ谷, v池袋, v東京, vコペンハーゲン} in 
+	i運賃を得る.適用する(s1, s2)
+
+end UseFare
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[UseFare]
+\end{rtinfo}

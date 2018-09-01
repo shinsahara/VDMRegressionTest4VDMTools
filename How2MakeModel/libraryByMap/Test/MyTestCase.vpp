@@ -1,0 +1,295 @@
+\subsection {TestCaseComm}
+\subsubsection {責任}
+回帰テスト共通機能を記述する。
+
+\begin{vdm_al}
+class TestCaseComm is subclass of TestCase
+
+operations
+public print : seq of char ==> ()
+print(a文字列) == 
+	let - = new IO().echo(a文字列) in skip;
+
+end TestCaseComm
+\end{vdm_al}
+
+\subsection {TestCaseUT0001}
+\subsubsection {責任}
+図書館のノーマルケースの単体テストを行う。
+
+\begin{vdm_al}
+class TestCaseUT0001 is subclass of TestCaseComm
+operations
+-- constructor
+public TestCaseUT0001: seq of char ==> TestCaseUT0001
+TestCaseUT0001(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	let	w図書館 = new 図書館1(),
+		分野1 = "ソフトウェア",
+		分野2 = "工学",
+		分野3 = "小説",
+		著者1 = "佐原伸",
+		著者2 = "井上ひさし",
+		本1 = mk_図書館1`本("デザインパターン",著者1,{分野1,分野2}),
+		本2 = mk_図書館1`本("紙屋町桜ホテル",著者2,{分野3}),
+		蔵書1 = {mk_token(101) |-> 本1},
+		蔵書2 = {mk_token(102) |-> 本1},
+		蔵書3 = {mk_token(103) |-> 本2},
+		蔵書4 = {mk_token(104) |-> 本2},
+		利用者1 = mk_token("利用者1"),
+		利用者2 = mk_token("利用者2"),
+		職員1 = mk_token("職員1")
+	in (
+		w図書館.蔵書を追加する(蔵書1);
+		w図書館.蔵書を追加する(蔵書2);
+		w図書館.蔵書を追加する(蔵書3);
+		w図書館.蔵書を追加する(蔵書4);
+		assertTrue("test01 蔵書の追加がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2, mk_token(104) |-> 本2}
+		);
+		let w見つかった本1 = w図書館.本を検索する("井上ひさし"),
+			w見つかった本2 = w図書館.本を検索する("工学")
+		in
+		assertTrue("test01 本の検索がおかしい。",
+			w見つかった本1 = {mk_token(103) |-> 本2, mk_token(104) |-> 本2} and
+			w見つかった本2 = {mk_token(101) |-> 本1, mk_token(102) |-> 本1}
+		);
+		w図書館.本を貸す({mk_token(101) |-> 本1}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(104) |-> 本2}, 利用者2, 職員1);
+		assertTrue("test01 本の貸出がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1, mk_token(103) |-> 本2}, 利用者2 |-> {mk_token(104) |-> 本2}} 
+		);
+		w図書館.本を返す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を返す({mk_token(104) |-> 本2}, 利用者2, 職員1);
+		assertTrue("test01 本の返却がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1}} 
+		);
+		w図書館.蔵書を削除する({mk_token(104) |-> 本2});
+		assertTrue("test01 蔵書の削除がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2}
+		);	
+	)
+);
+
+end TestCaseUT0001
+
+\end{vdm_al}
+
+\subsection {TestCaseUT0002}
+\subsubsection {責任}
+図書館のエラーケースの単体テストを行う。
+
+\begin{vdm_al}
+class TestCaseUT0002 is subclass of TestCaseComm
+operations
+-- constructor
+public TestCaseUT0002: seq of char ==> TestCaseUT0002
+TestCaseUT0002(name) == setName(name);
+
+public test01: () ==> ()
+test01 () == (
+	trap <RuntimeError> with 
+				print("\ttest01 意図通り、最大貸出数を超えて貸し出そうとするエラー発生。\n")
+	in
+	let	w図書館 = new 図書館1(),
+		分野1 = "ソフトウェア",
+		分野2 = "工学",
+		分野3 = "小説",
+		著者1 = "佐原伸",
+		著者2 = "井上ひさし",
+		本1 = mk_図書館1`本("デザインパターン",著者1,{分野1,分野2}),
+		本2 = mk_図書館1`本("紙屋町桜ホテル",著者2,{分野3}),
+		蔵書1 = {mk_token(101) |-> 本1},
+		蔵書2 = {mk_token(102) |-> 本1},
+		蔵書3 = {mk_token(103) |-> 本2},
+		蔵書4 = {mk_token(104) |-> 本2},
+		利用者1 = mk_token("利用者1"),
+		職員1 = mk_token("職員1")
+	in (
+		w図書館.蔵書を追加する(蔵書1);
+		w図書館.蔵書を追加する(蔵書2);
+		w図書館.蔵書を追加する(蔵書3);
+		w図書館.蔵書を追加する(蔵書4);
+		assertTrue("test01 蔵書の追加がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2, mk_token(104) |-> 本2}
+		);
+		let w見つかった本1 = w図書館.本を検索する("井上ひさし"),
+			w見つかった本2 = w図書館.本を検索する("工学")
+		in
+		assertTrue("test01 本の検索がおかしい。",
+			w見つかった本1 = {mk_token(103) |-> 本2, mk_token(104) |-> 本2} and
+			w見つかった本2 = {mk_token(101) |-> 本1, mk_token(102) |-> 本1}
+		);
+		w図書館.本を貸す({mk_token(101) |-> 本1}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(102) |-> 本1}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(104) |-> 本2}, 利用者1, 職員1);
+		assertTrue("test01 本の貸出がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {|->} 
+		);
+	)
+);
+	
+public test02: () ==> ()
+test02 () == (
+	trap <RuntimeError> with 
+				print("\ttest02 意図通り、貸出本を削除しようとするエラー発生。\n")
+	in
+	let	w図書館 = new 図書館1(),
+		分野1 = "ソフトウェア",
+		分野2 = "工学",
+		分野3 = "小説",
+		著者1 = "佐原伸",
+		著者2 = "井上ひさし",
+		本1 = mk_図書館1`本("デザインパターン",著者1,{分野1,分野2}),
+		本2 = mk_図書館1`本("紙屋町桜ホテル",著者2,{分野3}),
+		蔵書1 = {mk_token(101) |-> 本1},
+		蔵書2 = {mk_token(102) |-> 本1},
+		蔵書3 = {mk_token(103) |-> 本2},
+		蔵書4 = {mk_token(104) |-> 本2},
+		利用者1 = mk_token("利用者1"),
+		利用者2 = mk_token("利用者2"),
+		職員1 = mk_token("職員1")
+	in (
+		w図書館.蔵書を追加する(蔵書1);
+		w図書館.蔵書を追加する(蔵書2);
+		w図書館.蔵書を追加する(蔵書3);
+		w図書館.蔵書を追加する(蔵書4);
+		assertTrue("test02 蔵書の追加がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2, mk_token(104) |-> 本2}
+		);
+		let w見つかった本1 = w図書館.本を検索する("井上ひさし"),
+			w見つかった本2 = w図書館.本を検索する("工学")
+		in
+		assertTrue("test02 本の検索がおかしい。",
+			w見つかった本1 = {mk_token(103) |-> 本2, mk_token(104) |-> 本2} and
+			w見つかった本2 = {mk_token(101) |-> 本1, mk_token(102) |-> 本1}
+		);
+		w図書館.本を貸す({mk_token(101) |-> 本1}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(104) |-> 本2}, 利用者2, 職員1);
+		assertTrue("test02 本の貸出がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1, mk_token(103) |-> 本2}, 利用者2 |-> {mk_token(104) |-> 本2}} 
+		);
+		w図書館.本を返す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		assertTrue("test02 本の返却がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1}, 利用者2 |-> {mk_token(104) |-> 本2}}
+		);
+		w図書館.蔵書を削除する({mk_token(104) |-> 本2});
+		assertTrue("test02 蔵書の削除がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2}
+		);	
+	)
+);
+
+public test03: () ==> ()
+test03 () == (
+	trap <RuntimeError> with 
+				print("\ttest03 意図通り、貸出に存在しない本を返そうとするエラー発生。\n")
+	in
+	let	w図書館 = new 図書館1(),
+		分野1 = "ソフトウェア",
+		分野2 = "工学",
+		分野3 = "小説",
+		著者1 = "佐原伸",
+		著者2 = "井上ひさし",
+		本1 = mk_図書館1`本("デザインパターン",著者1,{分野1,分野2}),
+		本2 = mk_図書館1`本("紙屋町桜ホテル",著者2,{分野3}),
+		蔵書1 = {mk_token(101) |-> 本1},
+		蔵書2 = {mk_token(102) |-> 本1},
+		蔵書3 = {mk_token(103) |-> 本2},
+		蔵書4 = {mk_token(104) |-> 本2},
+		利用者1 = mk_token("利用者1"),
+		利用者2 = mk_token("利用者2"),
+		利用者3 = mk_token("利用者3"),
+		職員1 = mk_token("職員1")
+	in (
+		dcl w貸出 : 図書館1`貸出 := {|->};
+		w図書館.蔵書を追加する(蔵書1);
+		w図書館.蔵書を追加する(蔵書2);
+		w図書館.蔵書を追加する(蔵書3);
+		w図書館.蔵書を追加する(蔵書4);
+		assertTrue("test03 蔵書の追加がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, 
+													 mk_token(103) |-> 本2, mk_token(104) |-> 本2}
+		);
+		let w見つかった本1 = w図書館.本を検索する("井上ひさし"),
+			w見つかった本2 = w図書館.本を検索する("工学")
+		in
+		assertTrue("test03 本の検索がおかしい。",
+			w見つかった本1 = {mk_token(103) |-> 本2, mk_token(104) |-> 本2} and
+			w見つかった本2 = {mk_token(101) |-> 本1, mk_token(102) |-> 本1}
+		);
+		w図書館.本を貸す({mk_token(101) |-> 本1}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を貸す({mk_token(104) |-> 本2}, 利用者2, 職員1);
+		w貸出 := w図書館.貸出を得る();
+		assertTrue("test03 本の貸出がおかしい。",
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1,  mk_token(103) |-> 本2}, 
+							利用者2 |-> {mk_token(104) |-> 本2}} 
+		);
+		assertTrue("test03 意図に反して、貸出が可能になっている。",
+			let w貸出 = w図書館.貸出を得る(),
+					w蔵書 = w図書館.蔵書を得る() in
+			w図書館.貸出可能でない(利用者1, 蔵書1, w貸出, w蔵書, w図書館.v最大蔵書数)
+		);
+		w図書館.本を返す({mk_token(103) |-> 本2}, 利用者1, 職員1);
+		w図書館.本を返す({mk_token(105) |-> 本2}, 利用者2, 職員1);
+		assertTrue("test03 本の返却がおかしい。",
+			let w貸出 = w図書館.貸出を得る() in
+			w貸出 = {利用者1 |-> {mk_token(101) |-> 本1}} 
+		);
+		w図書館.蔵書を削除する({mk_token(104) |-> 本2});
+		assertTrue("test03 蔵書の削除がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, mk_token(103) |-> 本2}
+		);	
+		assertFalse("test03 意図に反して、利用者が存在している。",
+			let w貸出new = w図書館.貸出を得る() in
+			w図書館.貸出に追加されている({mk_token(104) |-> 本2}, 利用者3, w貸出new, w貸出)
+		);
+	)
+);
+
+public test04: () ==> ()
+test04 () == (
+	trap <RuntimeError> with 
+				print("\ttest04 意図通り、すでに存在する蔵書に追加しようとするエラー発生。\n")
+	in
+	let	w図書館 = new 図書館1(),
+		分野1 = "ソフトウェア",
+		分野2 = "工学",
+		分野3 = "小説",
+		著者1 = "佐原伸",
+		著者2 = "井上ひさし",
+		本1 = mk_図書館1`本("デザインパターン",著者1,{分野1,分野2}),
+		本2 = mk_図書館1`本("紙屋町桜ホテル",著者2,{分野3}),
+		蔵書1 = {mk_token(101) |-> 本1},
+		蔵書2 = {mk_token(102) |-> 本1},
+		蔵書3 = {mk_token(103) |-> 本2},
+		蔵書4 = {mk_token(101) |-> 本1, mk_token(104) |-> 本2}
+	in (
+		w図書館.蔵書を追加する(蔵書1);
+		w図書館.蔵書を追加する(蔵書2);
+		w図書館.蔵書を追加する(蔵書3);
+		w図書館.蔵書を追加する(蔵書4);
+		assertTrue("test04 蔵書の追加がおかしい。",
+			w図書館.蔵書を得る() = {mk_token(101) |-> 本1, mk_token(102) |-> 本1, 
+													 mk_token(103) |-> 本2, mk_token(104) |-> 本2}
+		)
+	)
+);
+
+
+end TestCaseUT0002
+
+\end{vdm_al}
+
+

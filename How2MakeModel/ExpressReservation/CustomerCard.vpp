@@ -1,0 +1,41 @@
+\subsubsection {予約会員証}
+\addcontentsline{toc}{section}{予約会員証}
+\paragraph {責任}
+予約会員証を表すドメイン・オブジェクトで、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class 予約会員証 is subclass of カード
+\end{vdm_al}
+
+\paragraph {インスタンス変数定義 : クレジットカード}
+\begin{vdm_al}
+instance variables
+sクレジットカード : クレジットカード;
+\end{vdm_al}
+
+\paragraph {構成子}
+\begin{vdm_al}
+operations
+public 予約会員証 : ID * 暗証番号 * クレジットカード ==> 予約会員証
+予約会員証(anID, a暗証番号, aクレジットカード) == atomic (
+	sID := anID;
+	s暗証番号 := a暗証番号;
+	sクレジットカード := aクレジットカード
+);
+\end{vdm_al}
+
+\paragraph {アクセッサー}
+\begin{vdm_al}
+public クレジットカードを得る : () ==> クレジットカード
+クレジットカードを得る() == return sクレジットカード;
+
+public クレジットカードを設定する : クレジットカード ==> ()
+クレジットカードを設定する(aクレジットカード) == sクレジットカード := aクレジットカード;
+
+end 予約会員証
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[予約会員証]
+\end{rtinfo}

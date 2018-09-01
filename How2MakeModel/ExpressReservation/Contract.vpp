@@ -1,0 +1,41 @@
+\subsubsection {契約クラス}
+\addcontentsline{toc}{section}{契約クラス}
+\paragraph {責任}
+特急券予約の客と鉄道会社Aの契約を表すドメイン・オブジェクトで、要求辞書階層の仕様である。
+
+\paragraph {クラス定義}
+\begin{vdm_al}
+class 契約 is subclass of 共通定義
+\end{vdm_al}
+
+\paragraph {インスタンス変数定義 : おサイフケータイ, 予約会員証}
+\begin{vdm_al}
+instance variables
+sおサイフケータイ : おサイフケータイ;
+s会員証 : 予約会員証;
+
+operations
+\end{vdm_al}
+
+\paragraph {構成子}
+実際には、契約が結ばれてから予約会員証が送られてくるまでの時差があるが、簡単化のため無視する。
+
+\begin{vdm_al}
+public 契約 : おサイフケータイ * 予約会員証 ==> 契約
+契約(aおサイフケータイ, a会員証) == atomic (
+	sおサイフケータイ := aおサイフケータイ;
+	s会員証 := a会員証
+);
+\end{vdm_al}
+
+\paragraph {アクセッサー}
+\begin{vdm_al}
+public 会員証を得る : () ==> 予約会員証
+会員証を得る() == return s会員証;
+
+end 契約
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[契約]
+\end{rtinfo}

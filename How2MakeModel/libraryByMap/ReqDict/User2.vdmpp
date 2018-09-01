@@ -1,0 +1,18 @@
+\section {利用者}
+		\index{りようしゃ@利用者}
+利用者を表す。
+
+\begin{vdm_al}
+class 利用者 is subclass of 人
+
+operations
+public 利用者 : seq of char ==> 利用者
+利用者(s) == i名前 := s;
+
+end 利用者
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[利用者]
+\end{rtinfo}

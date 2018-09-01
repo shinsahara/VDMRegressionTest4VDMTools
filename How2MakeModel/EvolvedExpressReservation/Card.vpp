@@ -1,0 +1,18 @@
+\section {カードクラス}
+\subsection {責任}
+カードの抽象クラス。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class カード is subclass of 共通定義
+
+instance variables
+protected sID : ID := nil;
+protected s暗証番号 : 暗証番号 := nil;
+
+end カード
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[カード]
+\end{rtinfo}

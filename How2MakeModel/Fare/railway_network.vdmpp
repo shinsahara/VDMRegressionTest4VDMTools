@@ -1,0 +1,48 @@
+\section{路線網}
+\index{ろせんもう@路線網}
+運賃計算に限らず使用することのできる、路線網の明示的知識を記述したドメイン･モデルである。
+
+\begin{vdm_al}
+class 路線網
+
+types
+public 駅= token;
+public 距離 = real;
+
+public 駅集合 = set of 駅
+inv w駅集合 == card w駅集合 >= 2;
+\end{vdm_al}
+
+\subsection{路線単位レコード}
+路線単位レコードは、両端の駅が同一にも関わらず複数の距離があることは考慮していない。
+
+\begin{vdm_al}
+public 路線単位 ::
+	f駅1 : 駅
+	f駅2 : 駅
+	f距離 : 距離
+inv w路線単位 == 路線単位の両側の駅は異なる(w路線単位.f駅1, w路線単位.f駅2) and 路線単位には距離がある(w路線単位.f距離);
+
+public 路線単位集合 = set of 路線単位
+inv w路線単位集合 == w路線単位集合 <> {};
+\end{vdm_al}
+
+\subsection{関数}
+\begin{vdm_al}
+functions
+static public 路線単位の両側の駅は異なる : 駅 * 駅 -> bool
+路線単位の両側の駅は異なる(a駅1, a駅2) == a駅1 <> a駅2;
+
+static public 路線単位には距離がある : 距離 -> bool
+路線単位には距離がある(a距離) == a距離 > 0;
+
+static public 路線単位列中の駅集合を得る : 路線単位集合 -> set of 駅
+路線単位列中の駅集合を得る(a路線単位集合) == 
+	dunion {{w路線単位.f駅1, w路線単位.f駅2} | w路線単位 in set a路線単位集合};
+
+end 路線網
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[路線網]
+\end{rtinfo}

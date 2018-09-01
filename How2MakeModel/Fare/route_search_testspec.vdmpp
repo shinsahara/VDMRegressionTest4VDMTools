@@ -1,0 +1,106 @@
+\section{TestSimple}
+鉄道の運賃計算仕様の回帰テストケース（単純版)である。
+
+\begin{vdm_al}
+class TestSimple is subclass of 鉄道ネットデータ
+
+values
+public v最大値 = 1E8;
+
+instance variables
+--public s路線検索 : ダイクストラ算法による路線検索 := new ダイクストラ算法による路線検索(v駅集合, v路線集合, v路線単位集合);
+public s路線検索 : ダイクストラ算法による路線検索 := new ダイクストラ算法による路線検索(v駅集合, v路線単位集合);
+public s運賃を得る : 運賃を得る := 
+	new 運賃を得る([
+			mk_運賃表辞書`行(0,1,150),
+			mk_運賃表辞書`行(1,3,160),
+			mk_運賃表辞書`行(3,6,190),
+			mk_運賃表辞書`行(6,10,220),
+			mk_運賃表辞書`行(10,15,250),
+			mk_運賃表辞書`行(15,v最大値,300)
+			],
+			v駅集合,
+			--v路線集合,
+			v路線単位集合);
+
+operations
+public run : () ==> seq of char * bool * map nat to bool
+run() == 
+	let testcases = [
+		t1(), t2(), t3(), t4(), t5(),
+		t6(), t7(), t8()
+		],
+		testResults = makeOrderMap(testcases)
+	in
+	return
+		mk_("回帰テスト結果 = ", forall i in set inds testcases & testcases(i), testResults);
+
+functions
+static public makeOrderMap : seq of bool +> map nat to bool
+makeOrderMap(s) == {i |-> s(i) | i in set inds s};
+
+operations
+public print : seq of char ==> ()
+print(s) == 
+	let - = new IO().echo(s) in skip;
+
+operations
+public t1 : () ==> bool
+t1() == 
+	let mk_(-,d) = s路線検索.最短経路(v四ツ谷, v品川) in
+	return
+	d = 9.5 and
+	s路線検索.最短距離(v四ツ谷, v品川) = 9.5;
+	
+public t2 : () ==> bool
+t2() == 
+	trap <RuntimeError> with (
+		print("\t t2 意図した事前条件エラーが発生した。\n");
+		return
+  			true
+  	) in 
+	return
+		s路線検索.到達可能である(v東京, vコペンハーゲン) = false;
+
+public t3 : () ==> bool
+t3() == 
+	let mk_(r,-) = s路線検索.最短経路(v東京, v新宿) in
+	return
+		r = [v東京, v四ツ谷, v新宿] and
+		s路線検索.最短距離(v東京, v新宿) = 7.7;
+
+public t4 : () ==> bool
+t4() == 
+	let mk_(r,-) = s路線検索.最短経路(v池袋, v四ツ谷) in
+	return
+		r = [v池袋, v新宿, v四ツ谷] and
+  		s路線検索.最短距離(v池袋, v四ツ谷) = 8.6;
+
+public t5 : () ==> bool
+t5() == 
+	let mk_(r,d) = s路線検索.最短経路(v品川, v四ツ谷) in
+	return
+		r = [v品川, v東京, v四ツ谷] and
+  		d = 9.3;
+
+public t6 : () ==> bool
+t6() == 
+	return
+	s運賃を得る.適用する(v池袋, v東京) = 250;
+
+public t7 : () ==> bool
+t7() == 
+	return
+	s運賃を得る.適用する(v池袋, v新宿) = 190;
+
+public t8 : () ==> bool
+t8() == 
+	return
+	s運賃を得る.適用する(v四ツ谷, v品川) = 220;
+  	
+end TestSimple
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[TestSimple]
+\end{rtinfo}

@@ -1,0 +1,116 @@
+\section {図書館要求辞書}
+	\index{としょかんようきゅうじしょ@図書館要求辞書}
+図書館のドメイン知識を持つ。
+
+図書館に関する要求辞書の役割も持つ。クラス名に付いているRDは、Requirement Dictionaryの略である。
+
+実行不可能な陰仕様を記述した図書館0クラスで定義されていた、関数群に対応した関数群を持つ。
+
+\begin{vdm_al}
+class 図書館RD
+\end{vdm_al}
+
+\subsection{型定義}
+\begin{vdm_al}
+types
+public 蔵書 = map 蔵書ID to 本;
+public 本 ::
+	f題名 : 題名
+	f著者 : 著者
+	f分野集合 : set of 分野;
+public 題名 = seq of char;
+public 著者 = seq of char;
+public 分野 = seq of char;
+public 蔵書ID = token;
+public 職員 = token ;
+public 利用者 = token;
+public 貸出 = inmap 利用者 to 蔵書;
+\end{vdm_al}
+
+\subsection{関数定義}
+
+\subsubsection{蔵書の状態に関する関数}
+	\index{ぞうしょのじょうたいにかんするかんすう@蔵書の状態に関する関数}
+\begin{vdm_al}
+functions
+public 蔵書が追加されている : 蔵書 * 蔵書 * 蔵書 +> bool
+蔵書が追加されている(a追加本, a図書館蔵書, a図書館蔵書旧値) ==
+	a図書館蔵書 = a図書館蔵書旧値 munion a追加本;
+
+public 蔵書が削除されている : 蔵書 * 蔵書 * 蔵書 +> bool
+蔵書が削除されている(a削除本, a図書館蔵書, a図書館蔵書旧値) ==
+	a図書館蔵書 = dom a削除本 <-: a図書館蔵書旧値;
+
+public 蔵書に存在する : 蔵書 * 蔵書 +> bool
+蔵書に存在する(a蔵書, a図書館蔵書) ==
+	exists id in set dom a蔵書 & id in set dom a図書館蔵書;
+	--forall id in set dom a蔵書 & id in set dom a図書館蔵書; --これは間違い
+	--dom a蔵書 subset dom a図書館蔵書; --これは間違い
+
+public 蔵書に存在しない : 蔵書 * 蔵書 +> bool
+蔵書に存在しない(a蔵書, a図書館蔵書) ==
+	not 蔵書に存在する(a蔵書, a図書館蔵書) ;
+\end{vdm_al}
+
+\subsubsection{貸出の状態に関する関数}
+	\index{かしだしのじょうたいにかんするかんすう@貸出の状態に関する関数}
+\begin{vdm_al}
+public 貸出に追加されている : 蔵書 * 利用者 * 貸出 * 貸出 +> bool
+貸出に追加されている(a貸出本, a利用者, a貸出, a貸出旧値) ==
+	if a利用者 in set dom a貸出 then
+		a貸出 = a貸出旧値 ++ {a利用者 |-> (a貸出(a利用者) munion a貸出本)}
+	else
+		a貸出 = a貸出旧値 munion {a利用者 |-> a貸出本};
+	
+public 貸出から削除されている : 蔵書 * 貸出 * 貸出 +> bool
+貸出から削除されている(a削除本, a貸出, a貸出旧値) ==
+	貸出に存在する(a削除本, a貸出旧値) and
+	貸出に存在しない(a削除本, a貸出);
+	
+public 貸出に存在する : 蔵書 * 貸出 +> bool
+貸出に存在する(a貸出本, a貸出) == 
+	let	w蔵書 = merge rng a貸出 in
+	exists id in set dom a貸出本 & id in set dom w蔵書;
+
+public 貸出に存在しない : 蔵書 * 貸出 +> bool
+貸出に存在しない(a貸出本, a貸出) ==
+	not 貸出に存在する(a貸出本, a貸出);
+\end{vdm_al}
+
+\begin{vdm_al}
+public 貸出可能である : 利用者 * 蔵書 * 貸出 * 蔵書 * nat1 +> bool
+貸出可能である(a利用者, a貸出本, a貸出, a図書館蔵書, a最大貸出数) ==
+	蔵書に存在する(a貸出本, a図書館蔵書) and
+	貸出に存在しない(a貸出本, a貸出) and
+	最大貸出数を超えていない(a利用者, a貸出本, a貸出, a最大貸出数);
+
+public 貸出可能でない : 利用者 * 蔵書 * 貸出 * 蔵書 * nat1  +> bool
+貸出可能でない(a利用者, a蔵書, a貸出, a図書館蔵書, a最大貸出数) ==
+	not 貸出可能である(a利用者, a蔵書, a貸出, a図書館蔵書, a最大貸出数);
+\end{vdm_al}
+
+\subsubsection{最大貸出数を超えていない}
+		\index{さいだいかしだしすうをこえていない@最大貸出数を超えていない}
+\begin{vdm_al}
+public 最大貸出数を超えていない : 利用者 * 蔵書 * 貸出 * nat1  +> bool
+最大貸出数を超えていない(a利用者, a貸出本, a貸出, a最大貸出数) ==
+	if a利用者 not in set dom a貸出 then
+		card dom a貸出本 <= a最大貸出数
+	else
+		card dom a貸出(a利用者) + card dom a貸出本 <= a最大貸出数;
+\end{vdm_al}
+
+\subsubsection{蔵書の検索に関する関数}
+		\index{ぞうしょのけんさくにかんするかんすう@蔵書の検索に関する関数}
+\begin{vdm_al}
+public 検索キーが空でない : 題名 | 著者 | 分野 +> bool
+検索キーが空でない(a検索キー) == a検索キー <> "";
+\end{vdm_al}
+
+\begin{vdm_al}
+end 図書館RD
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[図書館RD]
+\end{rtinfo}

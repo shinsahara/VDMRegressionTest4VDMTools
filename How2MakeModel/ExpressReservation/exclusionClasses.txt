@@ -1,0 +1,13 @@
+{
+ "VDMUtil",  "IO",  
+ "VDMToolsWizard", "AS", "CI", "REP", 
+ "GetRoutineName","AnalysedObject","Analyser", "AnalyserCommon", 
+ "C1", "C2",
+ "契約", "カード", "Test", "共通定義", 
+ "クレジットカード", "エクスプレス予約会員証", "SUICA", 
+ "TestCaseT0001", "TestCaseT0002", "TestCaseT0003", "TestCaseT0004", 
+ "TestSuite", "Throwable", "TestResult","RuntimeError", "TestListener", 
+ "Error", "Assert", "TestApp", "TestCase",
+ "PrintTestListener", "AssertionFailedError",
+ "Character", "Sequence", "String"
+}

@@ -1,0 +1,51 @@
+\section {契約クラス}
+\index{けいやく@契約}
+\subsection {責任}
+特急券予約の契約1件を表す。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class 契約 is subclass of 共通定義
+\end{vdm_al}
+
+\subsection {インスタンス変数定義 : おサイフケータイ, 予約会員証}
+\begin{vdm_al}
+instance variables
+sおサイフケータイ : おサイフケータイ;
+sクレジットカード : クレジットカード;
+s会員証 : 予約会員証;
+
+operations
+\end{vdm_al}
+
+\subsection {構成子}
+実際には、契約が結ばれてから予約会員証が送られてくるまでの時差があるが、簡単化のため無視する。
+
+\begin{vdm_al}
+public 契約 : おサイフケータイ * クレジットカード * 予約会員証 ==> 契約
+契約(aおサイフケータイ, aクレジットカード, a会員証) == atomic (
+	sおサイフケータイ := aおサイフケータイ;
+	sクレジットカード := aクレジットカード;
+	s会員証 := a会員証
+);
+\end{vdm_al}
+
+\subsection {アクセッサー}
+\begin{vdm_al}
+public 会員証を得る : () ==> 予約会員証
+会員証を得る() == return s会員証;
+\end{vdm_al}
+
+\begin{vdm_al}
+public クレジットカードを得る : () ==> クレジットカード
+クレジットカードを得る() == return sクレジットカード;
+
+public クレジットカードを設定する : クレジットカード ==> ()
+クレジットカードを設定する(aクレジットカード) == sクレジットカード := aクレジットカード;
+
+end 契約
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[契約]
+\end{rtinfo}

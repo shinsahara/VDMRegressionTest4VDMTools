@@ -1,0 +1,20 @@
+class UseUniqueNumber
+
+instance variables
+sUN : 発番者 :=  new 発番者();
+
+traces
+
+S1 : 
+	let n in set {1,2,3,4} in sUN.発番する(n){10,12}
+
+S2 : 
+	let n in set {2} in sUN.発番する(n)+
+
+S3 : 
+	let n in set {3} in sUN.発番する(n)*
+
+S4 : 
+	let n in set {4} in sUN.発番する(n){10002}
+
+end UseUniqueNumber

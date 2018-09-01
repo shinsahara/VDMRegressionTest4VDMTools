@@ -1,0 +1,18 @@
+\section {職員}
+		\index{しょくいん@職員}
+職員を表す。
+
+\begin{vdm_al}
+class 職員 is subclass of 人
+
+operations
+public 職員 : seq of char ==> 職員
+職員(s) == i名前 := s;
+
+end 職員
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[職員]
+\end{rtinfo}

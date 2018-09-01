@@ -1,0 +1,21 @@
+\section {著者}
+	\index{ちょしゃ@著者}
+著者を表す。
+
+\begin{vdm_al}
+class 著者 is subclass of 人
+
+operations
+public 著者 : seq of char ==> 著者
+著者(s) == i名前 := s;
+
+public 著者名を得る : () ==> seq of char
+著者名を得る() == return i名前;
+
+end 著者
+\end{vdm_al}
+
+
+\begin{rtinfo}
+{vdm.tc}[著者]
+\end{rtinfo}

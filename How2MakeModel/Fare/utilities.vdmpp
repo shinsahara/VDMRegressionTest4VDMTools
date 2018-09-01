@@ -1,0 +1,27 @@
+\section{Utilities}
+運賃計算のためのユーティリティ関数を定義している。
+
+\begin{vdm_al}
+class Utilities
+functions 
+--列sの要素の合計を返す。
+static public 合計 : seq of real ->  real
+合計(列) == 合計補助関数(列, 0);
+
+static 合計補助関数 : seq of real * real -> real
+合計補助関数(列, a合計) ==
+	if 列 = [] then
+		a合計
+	else
+		合計補助関数(tl 列, a合計 + hd 列)
+measure length;
+
+static length: seq of real * real +> nat
+length(a列, -) == len a列;	
+
+end Utilities
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[Utilities]
+\end{rtinfo}

@@ -1,0 +1,24 @@
+\section {クレジットカードクラス}
+\subsection {責任}
+クレジットカード1件を表す。
+
+\subsection {クラス定義}
+\begin{vdm_al}
+class クレジットカード is subclass of カード
+\end{vdm_al}
+
+\subsection {構成子}
+\begin{vdm_al}
+operations
+public クレジットカード : ID * 暗証番号 ==> クレジットカード
+クレジットカード(anID, a暗証番号) == atomic (
+	sID := anID;
+	s暗証番号 := a暗証番号
+);
+
+end クレジットカード
+\end{vdm_al}
+
+\begin{rtinfo}
+[TotalxCoverage]{vdm.tc}[クレジットカード]
+\end{rtinfo}

@@ -1,0 +1,105 @@
+\section {書庫}
+	\index{しょこ@書庫}
+書庫を表す。
+
+\begin{vdm_al}
+class 書庫
+
+values
+public v最大蔵書数 = 10000;
+
+types
+public 蔵書ID = token;
+public 蔵書 = map 蔵書ID to 本
+inv w蔵書 == card dom w蔵書 <= v最大蔵書数;
+
+instance variables
+protected i最大蔵書数 : nat;
+protected i蔵書 : 蔵書 := {|->};
+\end{vdm_al}
+
+\subsection{操作定義}
+
+\subsubsection{蔵書を追加する}
+	\index{ぞうしょをついかする@蔵書を追加する}
+\begin{vdm_al}
+operations
+public 蔵書を追加する : 蔵書 ==> ()
+蔵書を追加する(a追加本) == 
+	i蔵書 := i蔵書 munion a追加本
+pre
+	蔵書に存在しない(a追加本, i蔵書)
+post
+	蔵書が追加されている(a追加本, i蔵書, i蔵書~);
+\end{vdm_al}
+
+\subsubsection{蔵書を削除する}
+	\index{ぞうしょをさくじょする@蔵書を削除する}
+\begin{vdm_al}
+public 蔵書を削除する: 蔵書 ==> ()
+蔵書を削除する(a削除本) == 
+	i蔵書 := dom a削除本 <-: i蔵書
+pre 
+	蔵書に存在する(a削除本, i蔵書)
+post
+	蔵書が削除されている(a削除本, i蔵書, i蔵書~);
+\end{vdm_al}
+
+\subsubsection{本を検索する}
+	\index{ほんをけんさくする@本を検索する}
+\begin{vdm_al}
+public 本を検索する: (本`題名 | 著者 | 分野) ==> 蔵書
+本を検索する(a検索キー) ==  
+	return
+		{id |-> i蔵書(id) | id in set dom i蔵書 & 
+			(i蔵書(id).題名を得る() = a検索キー or 
+			i蔵書(id).著者を得る().名前を得る() = a検索キー or 
+			a検索キー in set {f.分野名を得る() | f in set i蔵書(id).分野集合を得る()})
+		}
+pre
+	検索キーが空でない(a検索キー)
+post
+	RESULT =
+		{id |-> i蔵書(id) | id in set dom i蔵書 & 
+			(i蔵書(id).題名を得る() = a検索キー or 
+			i蔵書(id).著者を得る().名前を得る() = a検索キー or 
+			a検索キー in set {f.分野名を得る() | f in set i蔵書(id).分野集合を得る()})
+		};
+\end{vdm_al}
+
+\subsection{蔵書の状態に関する関数}
+		\index{ぞうしょのじょうたいにかんするかんすう@蔵書の状態に関する関数}
+\begin{vdm_al}
+functions
+public 蔵書が追加されている : 蔵書 * 蔵書 * 蔵書 +> bool
+蔵書が追加されている(a追加本, a図書館蔵書, a図書館蔵書旧値) ==
+	a図書館蔵書 = a図書館蔵書旧値 munion a追加本;
+
+public 蔵書が削除されている : 蔵書 * 蔵書 * 蔵書 +> bool
+蔵書が削除されている(a削除本, a図書館蔵書, a図書館蔵書旧値) ==
+	a図書館蔵書 = dom a削除本 <-: a図書館蔵書旧値;
+
+public 蔵書に存在する : 蔵書 * 蔵書 +> bool
+蔵書に存在する(a蔵書, a図書館蔵書) ==
+	forall id in set dom a蔵書 & id in set dom a図書館蔵書;
+	--dom a蔵書 subset dom a図書館蔵書;
+
+public 蔵書に存在しない : 蔵書 * 蔵書 +> bool
+蔵書に存在しない(a蔵書, a図書館蔵書) ==
+	not 蔵書に存在する(a蔵書, a図書館蔵書) ;
+\end{vdm_al}
+
+\subsubsection{蔵書の検索に関する関数}
+		\index{ぞうしょのけんさくにかんするかんすう@蔵書の検索に関する関数}
+\begin{vdm_al}
+public 検索キーが空でない : 本`題名 | 著者 | 分野 +> bool
+検索キーが空でない(a検索キー) == a検索キー <> "";
+\end{vdm_al}
+
+\begin{vdm_al}
+end 書庫
+\end{vdm_al}
+
+\begin{rtinfo}
+{vdm.tc}[書庫]
+\end{rtinfo}
