@@ -22,7 +22,6 @@ SSLib -- VDM++ライブラリ written by Shin Sahara
 	Sequence.vpp	--列（シーケンス）に関わるソートやマージなどの機能を持つモジュール
 	Set.vpp		--集合に関わる機能を持つモジュール
 	sslib.prj		--SSlib用のVDM++のプロジェクトファイル
-	stdlib.prj  --stdlib下の標準ライブラリを使うプロジェクトファイル
 	String.vpp		--文字列に関する機能を持つモジュール
 	Term.vpp		--開始と終了のTimeを持つ期間を表すモジュール
 	test			--テスト用ファイルの入ったフォルダー

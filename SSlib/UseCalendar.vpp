@@ -12,7 +12,8 @@ S0 : sJT.run(); sDT.run()
 S1 : 
 	let y in set {2010,...,2012} in
 	let m in set {1,...,12} in 
-	let d in set {1,...,31} in sJC.整数三つ組から日付を得る(y, m, d).日付文字列を得る()
+	let d in set {1,...,31} in 
+	sJC.整数三つ組から日付を得る(y, m, d).日付文字列を得る()
 
 S2:
 	let y in set {2010,...,2020} in sJC.春分を得る(y).日付文字列を得る()
