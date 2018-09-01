@@ -1,0 +1,93 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+--$Heade$
+/*
+テストグループ
+	Termのテスト
+関連 UC
+	なし
+作成者
+	佐原伸
+*/
+class TermT is subclass of TestDriver
+functions
+public tests : () -> seq of TestCase
+tests() == 
+	[ 
+	new TermT01()
+	];
+end TermT
+----------------------------------------------------------
+/*
+シナリオID
+	構成子の検査
+親UseCase
+	なし
+内容
+	構成子の検査。
+*/
+class TermT01 is subclass of TestCase, CalendarDefinition
+operations 
+public test: () ==> bool
+test() == 
+	let	暦 = new JapaneseCalendar(),
+		a開始時間 = new Time(暦, 2003, 7, 30, 14, 29, 30, 20),
+		a終了時間 = new Time(暦, 2003, 7, 30, 14, 29, 30, 22),
+		t1        = new Time(暦, 2003, 7, 30, 14, 29, 30, 19),
+		t2        = new Time(暦, 2003, 7, 30, 14, 29, 30, 20),
+		t3        = new Time(暦, 2003, 7, 30, 14, 29, 30, 21),
+		t4        = new Time(暦, 2003, 7, 30, 14, 29, 30, 22),
+		t5        = new Time(暦, 2003, 7, 30, 14, 29, 30, 23),
+		t6        = new Time(暦, 2003, 7, 29, 14, 29, 30, 20),
+		t7        = new Time(暦, 2003, 7, 31, 14, 29, 30, 20),
+		t8        = new Time(暦, 2003, 7, 29, 14, 29, 29, 20),
+		t9        = new Time(暦, 2003, 7, 29, 14, 29, 31, 20),
+		term1 = new 期間(a開始時間, a終了時間)
+	in
+	return
+		not term1.期間内である(t1, term1) and
+		term1.期間内である(t2, term1) and
+		term1.期間内である(t3, term1) and
+		term1.期間内である(t4, term1) and
+		not term1.期間内である(t5, term1) and
+		not term1.期間内である(t6, term1) and
+		not term1.期間内である(t7, term1) and
+		not term1.期間内である(t8, term1) and
+		not term1.期間内である(t9, term1)
+	;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "TermT01:\t構成子の検査。期間内である()の検査";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end TermT01
+----------------------------------------------------------

@@ -1,0 +1,108 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+--$Id: MapT.vpp,v 1.1 2005/10/31 02:15:42 vdmtools Exp $
+/*
+テストグループ
+	Mapのテスト
+作成者
+	佐原伸
+*/
+----------------------------------------------------
+class MapT is subclass of TestDriver
+functions
+public tests : () -> seq of TestCase
+tests() == 
+	[ 
+	new MapT01(), new MapT02()	
+	];
+end MapT
+----------------------------------------------------
+/*
+シナリオID
+	Getに関するシナリオ
+内容
+	Getのテスト
+*/
+class MapT01 is subclass of TestCase, 共通定義
+operations 
+public test: () ==> bool
+test() == 
+	let	m1 = {1 |-> "佐藤圭", 19 |-> "佐原伸", 20 |-> "酒匂寛"},
+		m2 = {"佐藤圭" |-> 1,  "佐原伸" |-> 19,  "酒匂寛" |-> 20},
+		get1 = Map`Get[int, seq of char],
+		get2 = Map`Get[seq of char, int]
+	in
+	return 
+		get1(m1)(19) = "佐原伸" and
+		get1(m1)(2) = nil and
+		get2(m2)("佐原伸") = 19 and
+		get2(m2)("A級戦犯小泉純一郎") = nil
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "MapT01:\tGetのテスト。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end MapT01
+----------------------------------------------------
+/*
+シナリオID
+	内容の検査に関するシナリオ
+内容
+	内容の検査に関するテスト
+*/
+class MapT02 is subclass of TestCase, 共通定義
+operations 
+public test: () ==> bool
+test() == 
+	let	m1 = {1 |-> "佐藤圭", 19 |-> "佐原伸", 20 |-> "酒匂寛"},
+		m2 = {"佐藤圭" |-> 1,  "佐原伸" |-> 19,  "酒匂寛" |-> 20},
+		c1 = Map`Contains[int, seq of char],
+		k1 = Map`ContainsKey[int, seq of char],
+		c2 = Map`Contains[seq of char, int],
+		k2 = Map`ContainsKey[seq of char, int]
+	in
+	return 
+		c1(m1)("佐藤圭") and c1(m1)("佐原伸") and c1(m1)("酒匂寛") and
+		c1(m1)("A級戦犯小泉純一郎") = false and
+		k1(m1)(1) and k1(m1)(19) and k1(m1)(20) and
+		not k1(m1)(99) and
+		c2(m2)(1) and c2(m2)(19) and c2(m2)(20) and
+		c2(m2)(30) = false and
+		k2(m2)("佐藤圭") and k2(m2)("佐原伸") and k2(m2)("酒匂寛") and
+		k2(m2)("A級戦犯小泉純一郎") = false
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "MapT02:\t内容の検査に関するテスト。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end MapT02

@@ -1,0 +1,38 @@
+\subsection{Control}
+\subsubsection{責任}
+\index{せいきよ@制御} \index{こんとろーる@Control}
+制御量を計算する。
+
+\begin{vdm_al}
+class Control
+
+functions
+static public PID制御する : real * real * real *  real * real * real *  real * real * real -> real
+PID制御する(
+	a比例動作定数Kp, a目標値, a現在値,
+	a積分動作定数Ki, a前回制御量, a前々回までの制御量合計,
+	a微分動作定数Kd, a前回現在値, a前々回現在値
+) == 
+	比例動作制御量を得る(a比例動作定数Kp, a目標値, a現在値) + 
+	積分動作制御量を得る(a積分動作定数Ki, a前回制御量, a前々回までの制御量合計) +
+	微分動作制御量を得る(a微分動作定数Kd, a現在値, a前回現在値, a前々回現在値);
+
+static 比例動作制御量を得る :  real * real * real -> real
+比例動作制御量を得る(a比例動作定数Kp, a目標値, a現在値) == 
+	a比例動作定数Kp * (a目標値 - a現在値);
+
+static 積分動作制御量を得る : real * real * real -> real
+積分動作制御量を得る(a積分動作定数Ki, a前回制御量, a前々回までの制御量合計) ==
+	a積分動作定数Ki * (a前回制御量 + a前々回までの制御量合計);
+
+static 微分動作制御量を得る : real * real * real * real  -> real
+微分動作制御量を得る(a微分動作定数Kd, a現在値, a前回現在値, a前々回現在値) ==
+	a微分動作定数Kd * ((a現在値 - a前回現在値) - (a前回現在値 - a前々回現在値));
+
+end Control
+\end{vdm_al}
+
+
+\begin{rtinfo}
+[Control]{vdm.tc}[Control]
+\end{rtinfo}

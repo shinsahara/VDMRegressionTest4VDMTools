@@ -1,0 +1,147 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+/*
+テストグループ
+	Functionのテスト
+関連 UC
+	なし
+作成者
+	佐原伸
+*/
+class FunctionT is subclass of TestDriver
+functions
+public tests : () -> seq of TestCase
+tests() == 
+	[ 
+	new FunctionT01(), new FunctionT02(),  new FunctionT03()
+	];
+end FunctionT
+----------------------------------------------------------
+/*
+シナリオID
+	Fwhile, Funtilの検査
+親UseCase
+	なし
+内容
+	Fwhile, Funtilの検査。
+*/
+class FunctionT01 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	let	f1 = lambda x : int & x * 2,
+		p1 = lambda x : int & x > 1000,
+		p11 = lambda x : int & x <= 1000,
+		f2 = lambda x : seq of char & x ^ "0",
+		p2 = lambda x : seq of char & len x > 9,
+		p21 = lambda x : seq of char & len x <= 9
+	in
+	return
+		Function`Fwhile[int](p11)(f1)(1) = 1024 and
+		Function`Fwhile[seq of char](p21)(f2)("123456") = "1234560000" and
+		Function`Funtil[int](p1)(f1)(1) = 1024 and
+		Function`Funtil[seq of char](p2)(f2)("123456") = "1234560000"
+	;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "FunctionT01:\tFwhile, Funtilの検査。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end FunctionT01
+----------------------------------------------------------
+/*
+シナリオID
+	関数列適用の検査
+親UseCase
+	なし
+内容
+	関数列適用の検査。
+*/
+class FunctionT02 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	let	f1 = lambda x : int & x * 2,
+		f2 = lambda x : int & x * 3,
+		f3 = lambda x : int & x ** 2,
+		関数列1 = [f1, f2, f3],
+		f10 = lambda x : seq of char & x ^ x,
+		f11 = Sequence`take[char](10),
+		f12 = Sequence`drop[char](4),
+		関数列2 = [f10, f11, f12]
+	in
+	return
+		Function`Seq[int](関数列1)(2) = (2 * 2 * 3) ** 2 and
+		Function`Seq[seq of char](関数列2)("12345678") = "567812"
+	;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "FunctionT02:\t関数列適用の検査。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end FunctionT02
+----------------------------------------------------------
+/*
+シナリオID
+	関数読込の検査
+親UseCase
+	なし
+内容
+	関数読込の検査。
+*/
+
+class FunctionT03 is subclass of TestCase
+types
+public 整数 = int;
+public 読込関数型 = 整数 -> 整数 -> 整数;
+
+functions
+public 読込関数: () -> 読込関数型
+読込関数() == 
+	let fn =  "./fread-func.txt"
+	in
+	--Function`関数を読み込む[FunctionT03`読込関数型](fn);
+	Function`関数を読み込む[読込関数型](fn);
+
+operations 
+public test: () ==> bool
+test() == 
+	return 
+		読込関数() (3)(2) = 1 and
+		読込関数() (4)(4) = 0 and
+		読込関数() (4)(-3) = -2 and
+		読込関数() (-4)(3) = 2
+	;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "FunctionT03:\t関数読込の検査。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end FunctionT03

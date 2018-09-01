@@ -1,0 +1,65 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+
+class 期間
+/*
+責任
+	開始と終了のTimeを持つ期間を表す。
+概要
+	私は開始と終了のTimeを持つ期間である。
+*/
+
+instance variables
+開始時間 : [Time];
+終了時間 : [Time];
+
+operations
+static public 期間内である : Time * 期間 ==> bool
+期間内である(ある時間, 期間) ==
+	return
+		(期間.開始時間 = nil or 期間.開始時間.以下(ある時間)) and
+		(期間.終了時間 = nil or 期間.終了時間.以上(ある時間));
+
+public 等しい : 期間==> bool
+等しい(a期間) == 
+	return
+		 self.開始時間.等しい(a期間.開始時間) and self.終了時間.等しい(a期間.終了時間);
+
+public 期間:[Time]*[Time] ==> 期間
+期間(a開始時間, a終了時間) == (
+	開始時間 := a開始時間;
+	終了時間 := a終了時間;
+	return self
+);
+	
+end  期間

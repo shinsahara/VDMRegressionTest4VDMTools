@@ -1,0 +1,113 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+/*
+$Id: UniqueSequenceT.vpp,v 1.1 2005/10/31 02:15:42 vdmtools Exp $
+テストグループ
+	発番者のテスト
+関連 UC
+	なし
+
+*/
+class 発番者T is subclass of TestDriver
+functions
+public tests : () -> seq of TestCase
+tests () == 
+	[new 発番者T01(),new 発番者T02()
+	];
+end 発番者T
+
+/*
+シナリオID
+	発番者単体の全機能テスト
+内容
+	番号を初期化し、発番する。
+*/
+class 発番者T01 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	tixe { <前に出現した番号である>  |->  return true } in
+	let	o = new 発番者()	in
+	return
+		(
+		o.発番する(1) = "0" and
+		o.発番する(1) = "1" and
+		o.発番する(1) = "2" and
+		o.発番する(1) = "3" and
+		o.発番する(1) = "4" and
+		o.発番する(1) = "5" and
+		o.発番する(1) = "6" and
+		o.発番する(1) = "7" and
+		o.発番する(1) = "8" and
+		o.発番する(1) = "9" and
+		o.発番する(1) = "0" 
+		)
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := " 発番者T01:\t 発番者T01 1桁の番号を生成し、循環した。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end 発番者T01
+
+/*
+シナリオID
+	発番者単体の全機能テスト
+内容
+	番号を初期化し、発番する。
+*/
+class 発番者T02 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	let	o = new 発番者()	in
+	return
+		(
+		o.発番する(2) = "00" and 
+		o.発番する(2) = "01" and 
+		o.発番する(2) = "02" and
+		o.発番する(2) = "03" and
+		o.発番する(2) = "04" and
+		o.発番する(2) = "05" and
+		o.発番する(2) = "06" and
+		o.発番する(2) = "07" and
+		o.発番する(2) = "08" and
+		o.発番する(2) = "09" and
+		o.発番する(2) = "10" and 
+		o.発番する(2) = "11"
+		)
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := " 発番者T01:\t 発番者T02 2桁の番号の生成。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end 発番者T02

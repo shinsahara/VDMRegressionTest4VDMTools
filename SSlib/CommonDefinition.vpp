@@ -1,0 +1,66 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+
+class 共通定義 is subclass of Object
+/*
+作成者 = 佐原伸
+作成日 = 2002年 10月 30日 
+責任
+	事務処理共通の定義を表す。
+
+概要
+	事務処理共通の型などを定義する。
+*/
+
+values
+--public 文字列順	= lambda x : 文字列 , y : 文字列 & String`小さい(x,y);
+--public 数値順	= lambda x : 数値, y : 数値 & x < y;
+--public 日付順	= lambda x : 日付, y : 日付 & x.小さい(y);
+--public 金額順	= lambda x : 金額, y : 金額 & x < y;
+	
+types
+public 識別子 = 文字列;
+public 数量 = int;
+public 数値 = int;
+public Percent = real
+inv p == 0 <= p and p <= 100;-- 本当はrealなので0や100と比較してはいけないのだが、とりあえずの定義...
+public 文字列 = seq of char;
+public 日付 = Date;
+public 時刻 = Time;
+public 金額 = int;
+public 金額非負 = nat;
+public 金額正 = nat1;
+public 金額2 = real
+	inv w金額 == new Real().小数点以下n桁か？(w金額,2) ;	--小数点以下２桁
+
+end 共通定義

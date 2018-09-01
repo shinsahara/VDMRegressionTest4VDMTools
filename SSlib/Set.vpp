@@ -1,0 +1,80 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+
+class Set	-- 集合
+/*
+責任
+	集合を表す。
+概要
+	集合演算であらかじめ定義された機能以外の機能を定義する。
+*/
+
+	
+functions -- 関数定義。
+static public asSequence[@型]: set of @型 -> seq of @型
+asSequence(a集合) == VDMUtil`set2seq[@型](a集合)
+post
+	hasSameElems[@型](RESULT, a集合);
+
+-- 列が集合の要素を過不足無く含む事を表す述語(谷津さん作成）
+static public hasSameElems[@型] : (seq of @型) * (set of @型) -> bool
+hasSameElems(列,集合) == (elems 列 = 集合) and (len 列 = card 集合);
+
+--集合から要素数n個の組み合わせを得る。
+static public Combinations[@型] : nat1 -> set of @型 -> set of set of @型
+Combinations(n)(ある集合) ==
+	--{{a1,...,an} | a1 in set ある集合,..., an in set ある集合 & card {a1,...,an} = n}
+	{ ある要素 | ある要素 in set power ある集合 & card ある要素 = n};
+
+
+--関数fを集合に適用した結果の集合を返す。
+static public fmap[@型1,@型2]: (@型1 -> @型2) -> set of @型1 -> set of @型2
+fmap(関数)(集合) == {関数(s) | s in set 集合};
+
+--集合sの要素の合計を返す。重複した要素は加算されないので、注意が必要。
+static public Sum[@型]: set of @型 ->  @型
+Sum(集合) == Sum補助関数[@型](集合)(0)
+pre
+	is_(集合, set of real);
+
+static Sum補助関数[@型] : set of @型 -> @型 -> @型
+Sum補助関数(集合)(合計) ==
+	cases 集合 :
+	{}	-> 合計,
+	{要素} union 残集合->
+		Sum補助関数[@型](残集合)(合計 + 要素)
+	end
+pre
+	is_(集合, set of real) and is_real(合計);
+
+end Set

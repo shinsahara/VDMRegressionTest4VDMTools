@@ -1,0 +1,53 @@
+\subsection{ControlT}
+Controlクラスの回帰テストを行う。
+
+\begin{vdm_al}
+class ControlT is subclass of TestDriver
+functions
+public tests : () -> seq of TestCase
+tests() == 
+	[ 
+	new ControlT01()
+	];
+end ControlT
+\end{vdm_al}
+
+\begin{rtinfo}
+[ControlT]{vdm.tc}[ControlT]
+\end{rtinfo}
+
+\subsection{ControlT01}
+ETロボコンのPID制御のテストを行う。
+
+\begin{vdm_al}
+class ControlT01 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	let	
+		w比例動作定数Kp = 500,
+		w積分動作定数Ki = 100,
+		w微分動作定数Kd = 2000,
+		w目標値 = 10,
+		w現在値 = 6,
+		w前回制御量 = 1,
+		w前々回までの制御量合計 = 3,
+		w前回現在値 = 5,
+		w前々回現在値 = 2
+	in
+	return
+		Control`PID制御する(
+			w比例動作定数Kp, w目標値, w現在値,
+			w積分動作定数Ki, w前回制御量, w前々回までの制御量合計,
+			w微分動作定数Kd, w前回現在値, w前々回現在値
+		) = -1600;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "ControlT01:\t ETロボコンのPID制御のテストを行う";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end ControlT01
+\end{vdm_al}
+
+\begin{rtinfo}
+[ControlT01]{vdm.tc}[ControlT01]
+\end{rtinfo}

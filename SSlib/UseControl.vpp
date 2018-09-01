@@ -1,0 +1,39 @@
+\subsection{ControlT}
+Controlクラスの回帰テストを行う。
+
+\begin{vdm_al}
+class UseControl
+
+instance variables
+sc : Control :=  new Control();
+rt : ControlT := new ControlT();
+
+values
+v比例動作定数Kp = 500;
+v積分動作定数Ki = 100;
+v微分動作定数Kd = 2000;
+
+traces
+
+S0 : rt.run()
+
+S1 : 
+	let w目標値 in set {10, 11} in
+	let w現在値 in set {8, 9} in
+	let w前回制御量 in set {1,2} in
+	let w前々回までの制御量合計 in set {3,5} in
+	let w前回現在値 in set {6, 7} in
+	let w前々回現在値 in set {5, 6} in
+	sc.PID制御する(
+		v比例動作定数Kp, w目標値, w現在値,
+		v積分動作定数Ki, w前回制御量, w前々回までの制御量合計,
+		v微分動作定数Kd, w前回現在値, w前々回現在値
+	);
+
+end UseControl
+\end{vdm_al}
+
+\begin{rtinfo}
+[UseControl]{vdm.tc}[UseControl]
+\end{rtinfo}
+

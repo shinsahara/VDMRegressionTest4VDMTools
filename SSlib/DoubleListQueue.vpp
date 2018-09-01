@@ -1,0 +1,135 @@
+\subsection{DoubleListQueue}
+待ち行列に関わる関数を定義する。
+
+\subsubsection{実装について}
+先頭列と後続列の２つの列の組を使って待ち行列を実装している。
+
+\subsubsection{使用方法}
+最初に
+\begin{verbatim}
+	let Q0 = DoubleListQueue`empty[int]() in ...
+\end{verbatim}
+などとして空の待ち行列を定義する。
+
+待ち行列への追加は
+\begin{verbatim}
+	DoubleListQueue`enQueue(1)(Q0)
+\end{verbatim}
+などとすればよい。
+
+\subsubsection{仕様}
+\begin{vdm_al}
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+class DoubleListQueue
+
+functions
+\end{vdm_al}
+
+emptyは、空の待ち行列を定義する。
+\begin{vdm_al}
+static public empty[@型] : () -> seq of @型 * seq of @型
+empty() == mk_([], []);
+\end{vdm_al}
+
+IsEmptyは、待ち行列が空か否かを返す。
+\begin{vdm_al}
+static public isEmpty[@型] : (seq of @型 * seq of @型) -> bool
+isEmpty(s) == s = mk_([], []);
+\end{vdm_al}
+
+enQueueは、待ち行列mk\_(ある先頭列, ある後続列)にある要素を追加した待ち行列を返す。
+実装としては、ある後続列の前にある要素を追加する。
+\begin{vdm_al}
+static public enQueue[@型] : @型 * (seq of @型 * seq of @型) -> seq of @型 * seq of @型
+enQueue(ある要素, mk_(ある先頭列, ある後続列)) == mk_(ある先頭列, [ある要素] ^ ある後続列);
+\end{vdm_al}
+
+deQueueは、待ち行列mk\_(ある先頭列, ある後続列)の先頭を削除した待ち行列を返す。
+待ち行列がすでに空の場合はnilを返す。
+ある先頭列が空の場合は、ある後続列を反転して先頭列とし、後続列を空とした待ち行列を返す。
+\begin{vdm_al}
+static public deQueue[@型] : (seq of @型 * seq of @型) -> [seq of @型 * seq of @型]
+deQueue(mk_(ある先頭列, ある後続列)) == 
+	cases ある先頭列:
+		[-] ^ ある先頭列の残り	-> mk_(ある先頭列の残り, ある後続列),
+		[]	-> 
+			cases ある後続列:
+				[]		-> nil,
+				others	-> mk_(tl Sequence`freverse[@型](ある後続列), [])
+			end
+	end;
+\end{vdm_al}
+
+topは、待ち行列の先頭要素を返す。
+待ち行列がすでに空なら、nilを返す。
+ある先頭列が空の場合は、ある後続列を反転して、その先頭要素を返す。
+\begin{vdm_al}
+static public top[@型] : (seq of @型 * seq of @型) -> [@型]
+top(mk_(ある先頭列, ある後続列)) == 
+	cases ある先頭列:
+		[先頭] ^ -	-> 先頭,
+		[]	-> 
+			cases ある後続列:
+				[]		-> nil,
+				others	-> hd Sequence`freverse[@型](ある後続列)
+			end
+	end;
+\end{vdm_al}
+
+fromListは、ある列を待ち行列に変換して返す。
+\begin{vdm_al}
+static public fromList[@型] : seq of @型 * (seq of @型 * seq of @型) -> seq of @型 * seq of @型
+fromList(ある列, 待ち行列) ==
+	cases ある列:
+		[]				-> 待ち行列,
+		[先頭] ^ 列の残り		-> fromList[@型](列の残り, enQueue[@型](先頭, 待ち行列))
+	end;
+\end{vdm_al}
+
+toListは、ある待ち行列を列に変換して返す。
+\begin{vdm_al}
+static public toList[@型] : (seq of @型 * seq of @型) -> seq of @型
+toList(ある待ち行列) ==
+	cases ある待ち行列:
+		(mk_([], []))	-> [],
+		待ち行列	-> [top[@型](待ち行列)] ^ toList[@型](deQueue[@型](待ち行列))
+	end;
+
+end DoubleListQueue
+\end{vdm_al}
+
+
+\begin{rtinfo}
+[DoubleListQueue]{vdm.tc}[DoubleListQueue]
+\end{rtinfo}

@@ -1,0 +1,157 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+
+class Real is subclass of Number
+/*
+責任
+	実数を表す。
+概要
+	実数や数値演算であらかじめ定義された機能以外の機能を定義する。
+*/
+
+functions
+static public 桁数 : real -> nat
+桁数(x) ==
+	let	i = floor(x)	in
+	if x = i then
+		整数部桁数(i)
+	else
+		整数部桁数(i) + 1 + 小数点以下何桁か？(x);
+
+static public 整数部桁数 : int -> nat
+整数部桁数(i) == 整数部桁数補助関数(i, 1);
+
+static public 整数部桁数補助関数 : int * nat -> nat
+整数部桁数補助関数(i, ある桁数) ==
+	let	商 = i div 10 in
+	cases 商:
+		0		-> ある桁数,
+		others	-> Real`整数部桁数補助関数(商, ある桁数 + 1)
+	end
+measure idiv10;
+
+static idiv10 : int * nat +> nat
+idiv10(i, -) == i div 10;
+
+static public 小数点以下n桁か？ : real * nat -> bool
+小数点以下n桁か？(x,ある桁数) == 
+	小数点以下何桁か？(x) = ある桁数;
+
+static public 小数点以下何桁か？ : real -> nat
+小数点以下何桁か？(x) == 小数点以下何桁か？補助関数(x,0);
+
+static 小数点以下何桁か？補助関数 : real * nat -> nat
+小数点以下何桁か？補助関数(x,ある桁数) ==
+	if x = floor(x) then
+		ある桁数
+	else
+		小数点以下何桁か？補助関数(x * 10, ある桁数 + 1);
+
+static public 小数点以下n桁で四捨五入する : real * nat -> real
+小数点以下n桁で四捨五入する(r, ある桁数) ==
+	let	倍数 = 10 ** ある桁数
+	in
+	floor(r * 倍数  + 0.5) / 倍数
+pre
+	r >= 0;
+
+static public 導関数 : (real -> real) ->real -> real
+導関数(f)(x) == (f(x+変分) - f(x)) / 変分 ;
+
+--方程式の解法のニュートン法
+static public ニュートン法で方程式を解く: (real ->real) -> real -> real
+ニュートン法で方程式を解く(f)(x) ==
+	let	終了条件 = lambda y : real &  abs(f(y)) < 許容誤差,
+		次の近似 = lambda y : real & y - (f(y) / 導関数(f)(y))	in
+	new Function().Funtil[real](終了条件)(次の近似)(x);
+	
+-- 台形公式で積分値を求める。許容誤差は大きいし、まだ十分テストしていない。
+-- 区間[a,...,b]をn等分した刻み幅hで、関数f(x)を積分する。
+static public 積分 : (real -> real)  -> nat1 -> real -> real -> real
+積分(f)(n)(a)(b) == 
+	let	
+		h = (b - a) / n,
+		s = 列生成(n, a, h)
+	in
+	h * (f(a) / 2 + Sequence`Sum(Sequence`fmap[real, real](f)(s)) + f(b) / 2);
+
+operations
+static private 列生成 : nat1 * real * real  ==> seq of real
+列生成(n, a, h) == 
+	(	
+		dcl s : seq of real := [];
+		for i = 1 to n do
+		s := s ^ [a + i * h];
+	return s
+	);
+
+functions
+--平方根を求める。（ニュートン法のテストのため）
+static public root: real -> real
+root(x) ==
+	let	f = lambda y : real & y ** 2 - x	in
+	ニュートン法で方程式を解く(f)(x);
+
+static public 元利合計倍数を得る : real * int -> real
+元利合計倍数を得る(利子,年) == (1 + 利子) ** 年
+pre
+	利子 >= 0 and 年 > 0;
+
+static 利子を得る陰仕様_数学版 : real * int -> real
+利子を得る陰仕様_数学版(倍数,年) == is not yet specified
+pre
+	倍数 > 1.0 and 年 > 0 
+post
+	倍数 > 1.0 and 年 > 0 and
+	exists1 利子 : real &
+		let 元利合計 = 元利合計倍数を得る(利子,年)
+		in 倍数 = 元利合計  and RESULT = 利子;
+		
+static 利子を得る陰仕様_計算機版 : real * int -> real
+利子を得る陰仕様_計算機版 (倍数,年数) ==
+	is not yet specified
+pre
+	倍数 > 1.0 and 年数 > 0 
+post
+	倍数 > 1.0 and 年数 > 0 and
+	exists1 利子 : real & 
+		let	元利合計 = 元利合計倍数を得る(利子,年数)
+		in	Number`ほぼ等しい(倍数)(元利合計) and RESULT = 利子;
+
+--利子を得る陽仕様（ニュートン法を利用、関数プログラミング使用）
+static public 利子を得る: real * int -> real
+利子を得る(倍数,年数) ==
+	let	f = lambda 利子 : real & 倍数 - 元利合計倍数を得る(利子,年数)	in
+	ニュートン法で方程式を解く(f)(0);
+	
+end Real

@@ -1,0 +1,125 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+/*
+テストグループ
+	Numberのテスト
+関連 UC
+	なし
+作成者
+佐原伸
+*/
+class NumberT is subclass of TestDriver
+
+functions
+public tests : () -> seq of TestCase
+tests () == 
+	[ new NumberT01(),  new NumberT02(), new NumberT03()
+	];
+end NumberT
+
+/*
+シナリオID
+	計算に関するシナリオ０１
+親UseCase
+	計算に関するシナリオ
+内容
+	数値の小さい方と大きい方を計算
+*/
+class NumberT01 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	return
+		(Number`min[int](lambda x:int, y:int & x < y)(-3)(4) = -3 and
+		Number`min[int](lambda x:int, y:int & x < y)(4)(-3) = -3 and
+		Number`min[nat](lambda x:nat, y:nat & x < y)(2)(10) = 2 and
+		Number`min[int](lambda x:int, y:int & x < y)(0)(0) = 0 and
+		Number`max[real](lambda x:real, y:real & x < y)(0.001)( -0.001) = 0.001 and
+		Number`max[real](lambda x:real, y:real & x < y)(-0.001)( 0.001) = 0.001 and
+		Number`max[real](lambda x:real, y:real & x < y)(0.0)(0.0) = 0.0) and
+		Number`GCD(12, 18) =6 and
+		Number`GCD(42, 28) =14
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "NumberT01:\t 最小値、最大値、最大公約数の計算。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end NumberT01
+
+/*
+シナリオID
+	計算に関するシナリオ０2
+親UseCase
+	計算に関するシナリオ
+内容
+	計算可能かを判定
+*/
+class NumberT02 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	return
+		 Number`isComputable[char]('a') = false and
+		 Number`isComputable[int](-9) = true and
+		 Number`isComputable[nat](0) = true and
+		 Number`isComputable[nat1](1) = true and
+		 Number`isComputable[real](1.234) = true and
+		 Number`isComputable[rat](1.234) = true
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "NumberT02:\t計算可能かを判定。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end NumberT02
+
+/*
+シナリオID
+	計算に関するシナリオ０3
+親UseCase
+	計算に関するシナリオ
+内容
+	型が計算可能でない場合の処理
+*/
+class NumberT03 is subclass of TestCase
+operations 
+public test: () ==> bool
+test() == 
+	return
+		 Number`min[seq of int](lambda s1: seq of int, s2 : seq of int & len s1 < len s2)([1,2])([1,2,3])  = [1, 2]  and
+		 Number`max[seq of int](lambda s1: seq of int, s2 : seq of int & len s1 < len s2)([1,2])([1,2,3])  = [1, 2, 3] 
+;
+protected 準備する: () ==> ()
+準備する() == テスト名 := "NumberT03:\t型が計算可能でない場合でも比較できる。";
+protected 後始末する: () ==> ()
+後始末する() == return;
+end NumberT03

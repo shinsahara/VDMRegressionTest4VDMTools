@@ -1,0 +1,22 @@
+class T
+
+functions
+public getClasName[@型] : @型 -> seq of char
+getClasName(t) ==
+	let 
+	w区切り文字集合 = {'(', ')', '"'},
+	wオブジェクトを表す文字列 = VDMUtil`val2seq_of_char[@型](t),
+	w最初のトークン = String`GetToken(wオブジェクトを表す文字列, w区切り文字集合),
+	w2番目のトークンの先頭位置 = len w最初のトークン + 2, 
+	w文字数 = len wオブジェクトを表す文字列 - w2番目のトークンの先頭位置
+	in
+	if w文字数 > 0 then
+		let w最初のトークンを除いた文字列 = 
+				String`subStr(wオブジェクトを表す文字列, w2番目のトークンの先頭位置, w文字数)
+		in
+		String`GetToken(w最初のトークンを除いた文字列, w区切り文字集合)
+	else
+		w最初のトークン
+	
+		
+end T

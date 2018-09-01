@@ -1,0 +1,170 @@
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+
+class JapaneseCalendar is subclass of Calendar
+/*
+責任
+	日本の休日に関する情報を提供する。
+概要
+	日本の休日を返す。
+	日付の有効期限は、スーパークラスCalendarの定義に従う。
+	時刻に関わる計算は、日本標準時（JST)を使用している。
+*/
+
+values
+	Rcsid = "$Id";
+public 日本標準時とグリニッジ標準時との差 = 0.375;	-- 0.375 = 9 時間 = 9 / 24
+public 西暦と和暦の年差 = 1988;
+
+functions
+
+static private 文字列変換補助関数: int -> seq of char
+文字列変換補助関数(整数) == 
+	let	str = Integer`asString	in
+	if 整数 >= 10 then str(整数) else " " ^ str(整数);
+	
+static public 和暦日付文字列を得る : Date -> seq of char
+和暦日付文字列を得る(西暦日付) == 
+	let	asString =Integer`asString,
+		和暦の年 = 西暦日付.年() - 西暦と和暦の年差,
+		m = 西暦日付.月(),
+		d = 西暦日付.日(),
+		年文字列 = asString(和暦の年),
+		月文字列 = 文字列変換補助関数(m),
+		日付文字列 = 文字列変換補助関数(d)	in
+		年文字列 ^ 月文字列 ^ 日付文字列
+pre
+	西暦日付.年() >= 西暦と和暦の年差;	--今のところ、平成以後の和暦日付文字列を得る
+
+operations
+
+public 休日集合を設定する: int ==> ()
+休日集合を設定する(年) ==
+	let	元日 = 整数三つ組から日付を得る(年,1,1), 
+		成人の日 = 
+			if 年 >= 1949 and 年 <= 1999 then
+				整数三つ組から日付を得る(年,1,15)
+			elseif 年 >= 2000 then
+				第n指定曜日を得る(年,1,2,<月>)
+			else nil,
+		建国記念の日 = 整数三つ組から日付を得る(年,2,11), 
+		春分の日 = 春分を得る(年),
+		昭和の日 = 
+			if 年 >= 1925 then
+				整数三つ組から日付を得る(年,4,29)
+			else nil,
+		憲法記念日 = 
+			if 年 >= 1947 then
+				整数三つ組から日付を得る(年,5,3)
+			else nil,
+		みどりの日 = 
+			if 年 >= 1988 then
+				整数三つ組から日付を得る(年,5,4)
+			else nil, 
+		こどもの日 = 整数三つ組から日付を得る(年,5,5), --いつからかは未調査
+		海の日 = 
+			if 年 >= 1996 and 年 <= 2002 then 整数三つ組から日付を得る(年,7,20)
+			elseif 年 >= 2003 then 
+				第n指定曜日を得る(年,7, 3,<月>) 
+			else nil,
+		敬老の日 = 
+			if 年 >= 1966 and 年 <= 2002 then
+				整数三つ組から日付を得る(年,9,15)
+			elseif 年 >= 2003 then 第n指定曜日を得る(年,9, 3,<月>) 
+			else nil,
+		秋分の日 = 秋分を得る(年),
+		体育の日 = 
+			if 年 >= 1966 and 年 <= 1999 then
+				整数三つ組から日付を得る(年,10,10)
+			elseif 年 >= 2000 then
+				第n指定曜日を得る(年,10, 2,<月>)
+			else nil,
+		文化の日 = 
+			if 年 >= 1947 then
+				整数三つ組から日付を得る(年,11,3)
+			else nil,
+		勤労感謝の日 = 整数三つ組から日付を得る(年,11,23), --いつからは未調査
+		天皇誕生日 = 
+			if 年 >= 1989 then
+				整数三つ組から日付を得る(年,12,23)
+			else nil,
+		w国民の祝日 = {
+				元日, 成人の日, 建国記念の日, 春分の日, 昭和の日, 憲法記念日, みどりの日, こどもの日, 海の日, 敬老の日,
+				秋分の日, 体育の日, 文化の日, 勤労感謝の日, 天皇誕生日},
+		国民の祝日 = {e | e in set w国民の祝日 & e <> nil},
+		振替休日 = 
+			if 年 >= 2007 then 
+				{未来の国民の祝日以外の日を得る(国民の祝日, 日) | 日 in set 国民の祝日 & 日曜日か？(日)}
+			else
+				 {日.＋(1) | 日 in set 国民の祝日 & 日曜日か？(日)},
+		国民の休日 = 
+			if 年 >= 2007 then
+				休日に挟まれた平日を得る(国民の祝日) 
+			else
+				{}
+	in
+	休日集合写像 := 休日集合写像 munion { 年 |-> 国民の祝日 union 振替休日 union 国民の休日}
+pre
+	年 >= 2000;	--今のところ、2000年以後の休日のみ考えている。
+
+public JapaneseCalendar : () ==> JapaneseCalendar
+JapaneseCalendar() ==
+	(
+	グリニッジ標準時との差を設定する(日本標準時とグリニッジ標準時との差); 
+	return self
+	);
+
+public 休日に挟まれた平日を得る : set of Date ==> set of Date
+休日に挟まれた平日を得る(a国民の祝日) == (
+	let 
+		休日に挟まれた平日の候補 = 
+			dunion { {日.－(1), 日.＋(1)} | 日 in set a国民の祝日 &
+				日.－(1).年() = 日.年() and 日.＋(1).年() = 日.年()},
+		国民の祝日に挟まれた平日 = 
+			{ 日 | 日 in set 休日に挟まれた平日の候補 & 
+				let 前日 : Date = 日.－(1), 翌日 : Date =  日.＋(1) in
+				日付集合に含まれる(前日, a国民の祝日) and 日付集合に含まれる(翌日, a国民の祝日)}
+	in
+	return 国民の祝日に挟まれた平日
+ );
+
+functions
+--国民の祝日でない日付を返す（未来へ向かって探索する）
+public 未来の国民の祝日以外の日を得る :set of Date * Date-> Date
+未来の国民の祝日以外の日を得る(a国民の祝日, 日付) ==
+	cases  日付集合に含まれる(日付, a国民の祝日) :
+		(true)	-> 未来の国民の祝日以外の日を得る(a国民の祝日, 日付.＋( 1)),
+		others	-> 日付
+	end;
+
+end JapaneseCalendar

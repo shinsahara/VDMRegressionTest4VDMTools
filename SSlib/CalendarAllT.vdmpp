@@ -1,0 +1,25 @@
+\subsection{CalendarAllT}
+\subsubsection{責任}
+	回帰テスト全テストケースのテストを行う。
+
+\begin{vdm_al}
+class CalendarAllT
+operations
+public run : () ==> bool
+run() == 
+	let	テスト結果列 =
+		[	
+			new CalendarT().run(),
+			new SBCalendarT().run(),
+			new DateT().run()
+		],
+		メッセージ = "全テストの結果"
+	in
+	if   forall i in set inds テスト結果列 & テスト結果列(i) then
+		return new TestLogger().全体が成功した(メッセージ)
+	else
+		return new TestLogger().全体が失敗した(メッセージ)
+	
+end CalendarAllT
+\end{vdm_al}
+ 

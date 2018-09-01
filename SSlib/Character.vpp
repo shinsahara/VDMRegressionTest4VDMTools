@@ -1,0 +1,143 @@
+\subsection{Character}
+\subsubsection{責任}
+	文字共通の振る舞いを表す。
+
+\subsubsection{概要}
+すべての文字に共通な機能を定義する。
+
+\begin{itemize}
+	\item 数字を表す文字の整数への変換を行う。
+	\item 文字の大小を判定する。
+\end{itemize}
+
+\begin{vdm_al}
+/*	1
+2	-------------------------------------------------------------------------------		
+3	- Copyright (c) 2005, Shin Sahara		
+4	- 		
+5	- All rights reserved.		
+6	- 		
+7	- Redistribution and use in source and binary forms,		
+8	- with or without modification, are permitted provided that		
+9	- the following conditions are met:		
+10	- 		
+11	- * Redistributions of source code must retain the above copyright notice,		
+12	-   this list of conditions and the following disclaimer.		
+13	- * Redistributions in binary form must reproduce the above copyright notice,		
+14	-   this list of conditions and the following disclaimer in the documentation		
+15	-   and/or other materials provided with the distribution.		
+16	- * Neither the name of the SCSK CORPORATION nor the names of		
+17	-   its contributors may be used to endorse or promote products derived from		
+18	-   this software without specific prior written permission.		
+19	- 		
+20	- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS		
+21	- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT		
+22	- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR		
+23	- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR		
+24	- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,		
+25	- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,		
+26	- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR		
+27	- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF		
+28	- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING		
+29	- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS		
+30	- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.		
+31	-------------------------------------------------------------------------------		
+32	*/
+class Character
+
+values--値
+/*
+s文字順序列 = "0123456789aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ" ^
+	"あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわん";
+*/
+v数字順序写像 = 
+	{'0' |-> 1, '1' |-> 2, '2' |-> 3, '3' |-> 4, '4' |-> 5, '5' |-> 6, '6' |-> 7, '7' |-> 8, '8' |-> 9, '9' |-> 10};
+
+v英大文字順序写像 =
+	{'A' |-> 12, 'B' |-> 14, 'C' |-> 16, 'D' |-> 18, 'E' |-> 20, 'F' |-> 22, 'G' |-> 24, 'H' |-> 26, 'I' |-> 28, 
+	'J' |-> 30, 'K' |-> 32, 'L' |-> 34, 'M' |-> 36, 'N' |-> 38, 'O' |-> 40, 'P' |-> 42, 'Q' |-> 44, 'R' |-> 46,
+	'S' |-> 48, 'T' |-> 50, 'U' |-> 52, 'V' |-> 54, 'W' |-> 56, 'X' |-> 58, 'Y' |-> 60, 'Z' |-> 62};
+
+v小大文字順序写像 =
+	{'a' |-> 11, 'b' |-> 13, 'c' |-> 15, 'd' |-> 17, 'e' |-> 19, 'f' |-> 21, 'g' |-> 23, 'h' |-> 25, 'i' |-> 27,
+	'j' |-> 29, 'k' |-> 31, 'l' |-> 33, 'm' |-> 35, 'n' |-> 37, 'o' |-> 39, 'p' |-> 41, 'q' |-> 43, 'r' |-> 45, 
+	's' |-> 47, 't' |-> 49, 'u' |-> 51, 'v' |-> 53, 'w' |-> 55, 'x' |-> 57, 'y' |-> 59, 'z' |-> 61};
+
+vひらがな順序写像 =
+	{'あ' |-> 63, 'い' |-> 64, 'う' |-> 65, 'え' |-> 66, 'お' |-> 67, 
+	'か' |-> 68, 'き' |-> 69, 'く' |-> 70, 'け' |-> 71, 'こ' |-> 72, 
+	'さ' |-> 73, 'し' |-> 74, 'す' |-> 75, 'せ' |-> 76, 'そ' |-> 77, 
+	'た' |-> 78, 'ち' |-> 79, 'つ' |-> 80, 'て' |-> 81, 'と' |-> 82, 
+	'な' |-> 83, 'に' |-> 84, 'ぬ' |-> 85, 'ね' |-> 86, 'の' |-> 87, 
+	'は' |-> 88, 'ひ' |-> 89, 'ふ' |-> 90, 'へ' |-> 91, 'ほ' |-> 92, 
+	'ま' |-> 93, 'み' |-> 94, 'む' |-> 95, 'め' |-> 96, 'も' |-> 97, 
+	'や' |-> 98, 'ゆ' |-> 99, 'よ' |-> 100, 
+	'ら' |-> 101, 'り' |-> 102, 'る' |-> 103, 'れ' |-> 104, 'ろ' |-> 105, 
+	'わ' |-> 106, 'ん' |-> 107 };
+	
+v文字順序写像 = v数字順序写像 munion v英大文字順序写像 munion v小大文字順序写像 munion vひらがな順序写像;
+	
+functions
+/* s文字順序列からs文字順序写像を得るために使った関数
+static public makeOrderMap : seq of char +> map char to nat
+makeOrderMap(s) ==
+	{s(i) |-> i | i in set inds s};
+*/
+ 
+--変換関数群
+--数字を整数に変換する
+static public asDigit: char -> int | bool
+asDigit(c) ==
+	if isDigit(c) then
+		let s = [c] in
+		let mk_(-, i) = VDMUtil`seq_of_char2val[int](s) in i
+	else
+		false;
+
+--文字の辞書順序を返す。英数字以外の文字の場合は256を返す。
+static public as辞書順序 : char -> int
+as辞書順序(c) == 
+	if c in set dom v文字順序写像 then
+		v文字順序写像(c)
+	else
+		999999;
+		
+--判定関数群
+--数字かどうか判定する。
+
+static public isDigit : char -> bool
+isDigit(c) == c in set dom v数字順序写像;
+
+static public isLetter : char -> bool
+isLetter(c) == c in set dom (v英大文字順序写像 munion v小大文字順序写像);
+
+static public isLetterOrDigit : char -> bool
+isLetterOrDigit(c) == isDigit(c) or isLetter(c);
+
+static public isCapitalLetter : char -> bool
+isCapitalLetter(c) == c in set dom v英大文字順序写像;
+
+static public isLowercaseLetter : char -> bool
+isLowercaseLetter(c) == c in set dom v小大文字順序写像;
+
+static public isHiragana : char -> bool
+isHiragana(c) == c in set dom vひらがな順序写像;
+
+static public 小さい: char -> char -> bool
+小さい(c1)(c2) == Character`as辞書順序(c1) < Character`as辞書順序(c2);
+
+static public 以下 : char -> char -> bool
+以下(c1)(c2) ==  Character`小さい(c1)(c2) or c1 = c2;
+
+static public 大きい : char -> char -> bool
+大きい(c1)(c2) == Character`小さい(c2)(c1);
+
+static public 以上 : char -> char -> bool
+以上(c1)(c2) == not Character`小さい(c1)(c2);
+			
+end Character
+\end{vdm_al}
+
+\begin{rtinfo}
+[Sequence]{vdm.tc}[Character]
+\end{rtinfo}

@@ -1,0 +1,4597 @@
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	整数の合計。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
+SequenceT26:	 置換を得る関数Permutationsを検査する。	 OK.
+SequenceT25:	 平均を得る関数を検査する。	 OK.
+SequenceT23:	 Foldl関数を検査する。	 OK.
+SequenceT24:	 Foldr関数を検査する。	 OK.
+SequenceT19:	 各種の削除を検査する。	 OK.
+SequenceT20:	 zip関連の関数を検査する。	 OK.
+SequenceT21:	 Span関数を検査する。	 OK.
+SequenceT22:	 TakeWhile, DropWhile関数を検査する。	 OK.
+SequenceT01:	整数の合計と、積。	 OK.
+SequenceT02:	実数の合計、積。	 OK.
+SequenceT03:	整数と実数の昇順。	 OK.
+SequenceT04:	整数の降順。	 OK.
+SequenceT05:	順序通りか？。	 OK.
+SequenceT06:	系列をマージする。	 OK.
+SequenceT07:	列の操作する。	 OK.
+SequenceT08:	ソートする。	 OK.
+SequenceT09:	nil要素を削除する。	 OK.
+SequenceT10:	逆順の列を得る。	 OK.
+SequenceT11:	順列を得る。	 OK.
+SequenceT12:	列を検査する。	 OK.
+SequenceT13:	fmapを検査する。	 OK.
+SequenceT14:	Indexを検査する。	 OK.
+SequenceT15:	「平均を得る」を検査する。	 OK.
+SequenceT16:	InsertAtを検査する。	 OK.
+SequenceT17:	RemoveAtを検査する。	 OK.
+SequenceT18:	 UpdateAtを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TermT01:	構成子の検査。期間内である()の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+TimeT06:	現在日時をファイルから得ることの検査。	 OK.
+TimeT05:	インスタンス変数設定の検査。	 OK.
+TimeT04:	減算の検査。	 OK.
+TimeT03:	加算の検査。	 OK.
+TimeT02:	比較子の検査。	 OK.
+TimeT01:	構成子の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+MapT01:	Getのテスト。	 OK.
+MapT02:	内容の検査に関するテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+HashtableT52:	関数型の検索テスト。	 OK.
+HashtableT53:	関数型の消去・削除テスト。	 OK.
+HashtableT54:	関数型Put, Getのテスト。	 OK.
+HashtableT55:	関数型の情報を一括取りだしテスト。	 OK.
+HashtableT56:	関数型でhashCodeが重複する場合のテスト。	 OK.
+HashtableT57:	関数型Sizeのテスト。	 OK.
+HashtableT01:	構成子のテスト。	 OK.
+HashtableT02:	検索のテスト。	 OK.
+HashtableT03:	消去・削除のテスト。	 OK.
+HashtableT04:	put, getのテスト。	 OK.
+HashtableT05:	情報の一括取りだしのテスト。	 OK.
+HashtableT06:	hashCodeが重複する場合のテスト。	 OK.
+HashtableT07:	sizeのテスト。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DoubleListQueueT01:	待ち行列の検査	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+QueueT01:	待ち行列の検査	 OK.
+QueueT02:	先頭と後続列を同時に得る	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ 発番者T01:	 発番者T01 1桁の番号を生成し、循環した。	 OK.
+ 発番者T01:	 発番者T02 2桁の番号の生成。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+RealT01:	「利子を得る」を検査する	 OK.
+RealT02:	「平方根を得る」を検査する	 OK.
+RealT03:	「小数点以下n桁か？」と「小数点以下何桁か？」を検査する。	 OK.
+RealT04:	「桁数」を検査する。	 OK.
+RealT05:	「小数点以下n桁で四捨五入する」を検査する。	 OK.
+RealT06:	「実数が等しいか」を検査する。	 OK.
+RealT07:	x ** 2の「積分」を検査する。	 OK.
+RealT08:	sinの「積分」を検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SetT01:	列との比較と、列への変換	 OK.
+SetT02:	組み合わせを得る	 OK.
+SetT03:	fmapを検査する。	 OK.
+SetT04:	Sumを検査する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+NumberT01:	 最小値、最大値、最大公約数の計算。	 OK.
+NumberT02:	計算可能かを判定。	 OK.
+NumberT03:	型が計算可能でない場合でも比較できる。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+IntegerT01:	整数文字列変換	 OK.
+IntegerT02:	最大公約数と最小公倍数を求める	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+CalendarT12:	正則月を得る。	 OK.
+CalendarT11:	正則日付を得る。	 OK.
+CalendarT10:	月末日を得る。	 OK.
+CalendarT09:	今日の日付をファイルから読み込む。	 OK.
+CalendarT08:	国民の休日を得る。	 OK.
+CalendarT07:	文字列から日付を得る。	 OK.
+CalendarT06:	指定曜日を得る。	 OK.
+CalendarT05:	日付を比較する。	 OK.
+CalendarT03:	春分、夏至、秋分、冬至の計算。	 OK.
+CalendarT02:	日付の加減算。	 OK.
+CalendarT01:	日付の生成。	 OK.
+CalendarT04:	休日集合を得る。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+SBCalendarT06:	信用取引の決済日（期日）を得る。	 OK.
+SBCalendarT05:	基準日をファイルから読み込む。	 OK.
+SBCalendarT04:	会社基準日機能を検査する 。	 OK.
+SBCalendarT03:	限月の正当性チェックと権利行使日獲得を検査する。	 OK.
+SBCalendarT02:	休日集合を得る。	 OK.
+SBCalendarT01:	最大日付、日付が空かの判定などをテストする。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+DateT01:	曜日計算の検査。	 OK.
+DateT02:	日付を変換する。	 OK.
+DateT03:	休日数を得る。	 OK.
+DateT04:	日付計算を行う。	 OK.
+DateT05:	日付を比較する。	 OK.
+DateT06:	指定曜日を得る。	 OK.
+DateT07:	日付に関する照会。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+FunctionT01:	Fwhile, Funtilの検査。	 OK.
+FunctionT02:	関数列適用の検査。	 OK.
+FunctionT03:	関数読込の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+ProductT01:	 カリー化の検査。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+StringT05:	文字の大小を比較する。	 OK.
+StringT06:	部分文字列を得る。	 OK.
+StringT01:	数字を整数に変換。	 OK.
+StringT02:	文字の辞書順序を返す	 OK.
+StringT03:	文字列の大小を比較する。	 OK.
+StringT04:	文字列が等しいかを比較する	 OK.
+StringT07:	数字文字列の扱いを検査する。	 OK.
+StringT08:	指定した文字が、文字列に最初に出現する位置を検査する。	 OK.
+StringT09:	指定した文字列が、ある文字列に含まれるかを検査する。	 OK.
+StringT11:	指定した文字列の先頭tokenを得る。	 OK.
+StringT12:	文字列を行に分解する。	 OK.
+StringT13:	英数字かの判定が正しいかを検査する。	 OK.
+StringT14:	 関数で指定した文字列種別か判定する。	 OK.
+StringT10:	指定した文字列が空の場合、ある文字列に含まれるかを検査するが、テストの意図通り、事前条件エラーが発生する。	 OK.
+あるテストケース列全部のテスト結果	 OK!!
+全テストの結果	 OK!!
